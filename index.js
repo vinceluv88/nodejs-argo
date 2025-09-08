@@ -64,7 +64,7 @@ function startArgo() {
       const argoDomain = match[1];
       console.log("ArgoDomain:", argoDomain);
 
-      const uuid = "11111111-2222-3333-4444-555555555555"; // 你可以改成自己的 UUID
+      const uuid = "1020b2af-a175-41a7-b9c5-08e28be09016"; // 你可以改成自己的 UUID
 
       // VMess 节点
       const vmess = {
