@@ -3,45 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>系统信息 & 香港天气地图</title>
-    <!-- Leaflet 地图 CSS -->
+    <title>系统仪表盘 - 毛玻璃免费地图版</title>
+    <!-- Leaflet 免费开源地图 CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
+        :root {
+            /* 白天模式毛玻璃变量 */
+            --glass-bg: rgba(255, 255, 255, 0.35);
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --text-main: #1d1d1f;
+            --text-sub: #424245;
+            --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+            --bg-gradient: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            --box-bg: rgba(255, 255, 255, 0.25);
+        }
+
+        /* 自动监听系统深色模式 */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                /* 黑夜模式毛玻璃变量 */
+                --glass-bg: rgba(30, 30, 30, 0.45);
+                --glass-border: rgba(255, 255, 255, 0.1);
+                --text-main: #f5f5f7;
+                --text-sub: #a1a1a6;
+                --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+                --bg-gradient: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+                --box-bg: rgba(255, 255, 255, 0.05);
+            }
+        }
+
+        /* 强制地图不受深色模式影响，始终保持白天清晰渲染 */
+        .leaflet-tile-container img {
+            filter: none !important;
+            -webkit-filter: none !important;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease;
         }
 
         body {
-            background-color: #f4f6f9;
-            color: #333;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-main);
             padding: 20px;
+            min-height: 100vh;
+        }
+
+        .header-bar {
+            max-width: 1200px;
+            margin: 0 auto 25px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-bar h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 20px;
         }
 
+        /* 毛玻璃卡片通用样式 */
         .card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 22px;
+            box-shadow: var(--card-shadow);
         }
 
         .card-header {
             font-size: 1.1rem;
             font-weight: 600;
-            margin-bottom: 15px;
-            color: #1a73e8;
-            border-bottom: 2px solid #f0f2f5;
-            padding-bottom: 8px;
+            margin-bottom: 18px;
+            color: var(--text-main);
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -50,241 +102,262 @@
         .info-item {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 10px;
+            align-items: center;
+            margin-bottom: 12px;
             font-size: 0.95rem;
         }
 
         .info-label {
-            color: #666;
+            color: var(--text-sub);
         }
 
         .info-value {
             font-weight: 500;
-            color: #111;
+            color: var(--text-main);
             text-align: right;
             word-break: break-all;
+            margin-left: 10px;
         }
 
-        /* 地图样式 */
-        .map-card {
-            grid-column: 1 / -1;
+        /* 天气网络卡片样式 */
+        .weather-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            text-align: center;
+            margin-top: 10px;
         }
 
-        #map {
-            height: 450px;
-            width: 100%;
-            border-radius: 8px;
+        .weather-box {
+            background: var(--box-bg);
+            border: 1px solid var(--glass-border);
+            padding: 12px 8px;
+            border-radius: 14px;
+        }
+
+        .weather-city {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-main);
         }
 
         .weather-temp {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #333;
-            margin-top: 5px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 6px 0;
+            color: var(--text-main);
+        }
+
+        .weather-desc {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+        }
+
+        /* 地图卡片 */
+        .map-card {
+            grid-column: 1 / -1;
+            padding: 15px;
+        }
+
+        #map {
+            height: 480px;
+            width: 100%;
+            border-radius: 14px;
+            z-index: 1;
         }
 
         .loading {
-            color: #888;
+            opacity: 0.6;
             font-style: italic;
         }
     </style>
 </head>
 <body>
 
+    <div class="header-bar">
+        <h2>系统仪表盘</h2>
+    </div>
+
     <div class="container">
-        <!-- 1. IP 及位置信息 -->
+        <!-- 1. IP 地址及地理位置 -->
         <div class="card">
             <div class="card-header">🌐 网络 & IP 信息</div>
             <div class="info-item">
                 <span class="info-label">IP 地址</span>
-                <span class="info-value loading" id="ip">加载中...</span>
+                <span class="info-value loading" id="ip">检测中...</span>
             </div>
             <div class="info-item">
                 <span class="info-label">国家 / 地区</span>
-                <span class="info-value loading" id="location">加载中...</span>
+                <span class="info-value loading" id="location">检测中...</span>
             </div>
             <div class="info-item">
                 <span class="info-label">城市</span>
-                <span class="info-value loading" id="city">加载中...</span>
+                <span class="info-value loading" id="city">检测中...</span>
             </div>
             <div class="info-item">
-                <span class="info-label">网络运营商 (ISP)</span>
-                <span class="info-value loading" id="isp">加载中...</span>
+                <span class="info-label">网络服务商 (ISP)</span>
+                <span class="info-value loading" id="isp">检测中...</span>
             </div>
         </div>
 
-        <!-- 2. 设备与浏览器信息 -->
+        <!-- 2. 设备与系统信息 -->
         <div class="card">
             <div class="card-header">💻 设备 & 浏览器</div>
             <div class="info-item">
                 <span class="info-label">操作系统</span>
-                <span class="info-value" id="os">检测中...</span>
+                <span class="info-value" id="os">读取中...</span>
             </div>
             <div class="info-item">
                 <span class="info-label">屏幕分辨率</span>
-                <span class="info-value" id="screen">检测中...</span>
+                <span class="info-value" id="screen">读取中...</span>
             </div>
             <div class="info-item">
-                <span class="info-label">系统语言</span>
-                <span class="info-value" id="language">检测中...</span>
+                <span class="info-label">首选语言</span>
+                <span class="info-value" id="language">读取中...</span>
             </div>
-            <div class="info-item">
-                <span class="info-label">浏览器代理</span>
-                <span class="info-value" id="browser" style="font-size: 0.8rem;">检测中...</span>
-            </div>
-        </div>
-
-        <!-- 3. 香港时间与天气 -->
-        <div class="card">
-            <div class="card-header">🇭🇰 香港时间 & 天气</div>
             <div class="info-item">
                 <span class="info-label">香港时间 (UTC+8)</span>
                 <span class="info-value" id="hk-time">计算中...</span>
             </div>
-            <div class="info-item">
-                <span class="info-label">当前天气</span>
-                <span class="info-value loading" id="hk-weather-desc">加载中...</span>
-            </div>
-            <div class="info-item">
-                <span class="info-label">实时气温</span>
-                <span class="info-value weather-temp" id="hk-temp">--°C</span>
-            </div>
-            <div class="info-item">
-                <span class="info-label">相对湿度</span>
-                <span class="info-value" id="hk-humidity">--%</span>
+        </div>
+
+        <!-- 3. 三地实时天气 (当前 IP、香港、广州) -->
+        <div class="card">
+            <div class="card-header">☀️ 实时天气</div>
+            <div class="weather-grid">
+                <!-- 本地天气 -->
+                <div class="weather-box">
+                    <div class="weather-city" id="local-city-name">当前 IP</div>
+                    <div class="weather-temp" id="local-temp">--°C</div>
+                    <div class="weather-desc" id="local-weather">加载中...</div>
+                </div>
+                <!-- 香港天气 -->
+                <div class="weather-box">
+                    <div class="weather-city">🇭🇰 香港</div>
+                    <div class="weather-temp" id="hk-temp">--°C</div>
+                    <div class="weather-desc" id="hk-weather">加载中...</div>
+                </div>
+                <!-- 广州天气 -->
+                <div class="weather-box">
+                    <div class="weather-city">🇨🇳 广州</div>
+                    <div class="weather-temp" id="gz-temp">--°C</div>
+                    <div class="weather-desc" id="gz-weather">加载中...</div>
+                </div>
             </div>
         </div>
 
-        <!-- 4. 世界地图 -->
+        <!-- 4. 免费世界地图 (CARTO 白天浅色图层) -->
         <div class="card map-card">
-            <div class="card-header">🗺️ 世界地图 (标记当前 IP 位置)</div>
+            <div class="card-header">🗺️ 世界地图 (标记 IP 所在位置)</div>
             <div id="map"></div>
         </div>
     </div>
 
-    <!-- Leaflet 地图 JS -->
+    <!-- Leaflet 免费开源地图 JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
-        // --- 1. 初始化地图 ---
-        // 默认视角设置为世界中心 (0, 0)，缩放级别为 2
+        // --- 1. 初始化免费地图 (强制白天明亮风格) ---
+        // 使用免费免 API Key 的 CARTO Positron 白天地图瓦片
         const map = L.map('map').setView([20, 0], 2);
         
-        // 加载 OpenStreetMap 开源地图图层
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
             maxZoom: 19,
-            attribution: '© OpenStreetMap contributors'
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/">CARTO</a>'
         }).addTo(map);
 
-        // --- 2. 获取 IP 及地理位置信息 ---
-        async function fetchIPInfo() {
+        // --- 2. WMO 天气代码解析器 ---
+        function getWeatherDescription(code) {
+            const codes = {
+                0: '晴朗 ☀️', 1: '大致晴 🌤️', 2: '多云 ⛅', 3: '阴天 ☁️',
+                45: '有雾 🌫️', 48: '雾淞 🌫️', 51: '细雨 🌧️', 61: '小雨 🌧️',
+                63: '中雨 🌧️', 65: '大雨 🌧️', 80: '阵雨 🌦️', 95: '雷暴 🌩️'
+            };
+            return codes[code] || '未知';
+        }
+
+        // 获取天气数据的公共方法 (Open-Meteo 免费 API)
+        async function fetchWeather(lat, lon, tempId, descId) {
             try {
-                // 使用 ipapi.co 开源免费接口 (支持 HTTPS)
+                const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code`;
+                const res = await fetch(url);
+                const data = await res.json();
+                document.getElementById(tempId).textContent = `${Math.round(data.current.temperature_2m)}°C`;
+                document.getElementById(descId).textContent = getWeatherDescription(data.current.weather_code);
+            } catch (e) {
+                document.getElementById(descId).textContent = '加载失败';
+            }
+        }
+
+        // --- 3. 获取 IP 信息并在地图定位 ---
+        async function fetchIPAndLocalWeather() {
+            try {
+                // 使用免费无须注册的 ipapi.co 接口
                 const response = await fetch('https://ipapi.co/json/');
                 const data = await response.json();
 
                 document.getElementById('ip').textContent = data.ip || '未知';
-                document.getElementById('location').textContent = `${data.country_name} (${data.country_code})`;
+                document.getElementById('location').textContent = `${data.country_name || ''} (${data.country_code || ''})`;
                 document.getElementById('city').textContent = data.city || '未知';
                 document.getElementById('isp').textContent = data.org || '未知';
 
-                // 如果成功拿到经纬度，在地图上添加标记并定焦
+                if (data.city) {
+                    document.getElementById('local-city-name').textContent = data.city;
+                }
+
                 if (data.latitude && data.longitude) {
-                    const lat = data.latitude;
-                    const lon = data.longitude;
-
-                    // 移动地图视角到 IP 所在地
-                    map.setView([lat, lon], 6);
-
-                    // 添加标记
-                    L.marker([lat, lon]).addTo(map)
-                        .bindPopup(`<b>当前位置</b><br>${data.city}, ${data.country_name}`)
+                    // 平滑缩放到 IP 位置
+                    map.setView([data.latitude, data.longitude], 6);
+                    
+                    // 地图标记弹窗
+                    L.marker([data.latitude, data.longitude]).addTo(map)
+                        .bindPopup(`<b>当前位置</b><br>${data.city || '未知'}, ${data.country_name || ''}`)
                         .openPopup();
+
+                    // 加载本地 IP 实时天气
+                    fetchWeather(data.latitude, data.longitude, 'local-temp', 'local-weather');
                 }
             } catch (error) {
-                console.error('获取 IP 失败:', error);
-                document.getElementById('ip').textContent = '获取失败 (请检查广告拦截器)';
+                console.error(error);
+                document.getElementById('ip').textContent = '获取失败';
+                document.getElementById('local-weather').textContent = '无法定位';
             }
         }
 
-        // --- 3. 获取设备信息 ---
+        // --- 4. 获取本地设备与系统信息 ---
         function getDeviceInfo() {
-            // 简单解析 OS
-            const userAgent = navigator.userAgent;
-            let os = "未知操作系统";
-            if (userAgent.indexOf("Win") !== -1) os = "Windows";
-            if (userAgent.indexOf("Mac") !== -1) os = "macOS";
-            if (userAgent.indexOf("Linux") !== -1) os = "Linux";
-            if (userAgent.indexOf("Android") !== -1) os = "Android";
-            if (userAgent.indexOf("like Mac") !== -1) os = "iOS";
+            const ua = navigator.userAgent;
+            let os = "未知系统";
+            if (ua.indexOf("Win") !== -1) os = "Windows";
+            if (ua.indexOf("Mac") !== -1) os = "macOS";
+            if (ua.indexOf("Linux") !== -1) os = "Linux";
+            if (ua.indexOf("Android") !== -1) os = "Android";
+            if (ua.indexOf("like Mac") !== -1) os = "iOS";
 
             document.getElementById('os').textContent = os;
             document.getElementById('screen').textContent = `${window.screen.width} x ${window.screen.height}`;
-            document.getElementById('language').textContent = navigator.language || navigator.userLanguage;
-            document.getElementById('browser').textContent = navigator.userAgent.split(' ')[0];
+            document.getElementById('language').textContent = navigator.language;
         }
 
-        // --- 4. 香港实时时间更新 ---
+        // --- 5. 实时计算并更新香港时间 ---
         function updateHKTime() {
             const options = {
                 timeZone: 'Asia/Hong_Kong',
-                year: 'numeric',
-                month: '2-digit',
-                day: '2-digit',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
+                hour: '2-digit', minute: '2-digit', second: '2-digit',
                 hour12: false
             };
-            const formatter = new Intl.DateTimeFormat('zh-CN', options);
-            document.getElementById('hk-time').textContent = formatter.format(new Date());
+            document.getElementById('hk-time').textContent = new Intl.DateTimeFormat('zh-CN', options).format(new Date());
         }
 
-        // --- 5. 获取香港实时天气 (使用 open-meteo 免费 API) ---
-        async function fetchHKWeather() {
-            try {
-                // 香港的经纬度大约为: 22.3193, 114.1694
-                const url = 'https://api.open-meteo.com/v1/forecast?latitude=22.3193&longitude=114.1694&current=temperature_2m,relative_humidity_2m,weather_code&timezone=Asia%2FHong_Kong';
-                const response = await fetch(url);
-                const data = await response.json();
-
-                const current = data.current;
-                document.getElementById('hk-temp').textContent = `${current.temperature_2m}°C`;
-                document.getElementById('hk-humidity').textContent = `${current.relative_humidity_2m}%`;
-                
-                // 简单转化 Weather Code 为描述
-                document.getElementById('hk-weather-desc').textContent = getWeatherDescription(current.weather_code);
-            } catch (error) {
-                console.error('获取天气失败:', error);
-                document.getElementById('hk-weather-desc').textContent = '天气数据加载失败';
-            }
-        }
-
-        // 天气代码转换器 (WMO 代码表)
-        function getWeatherDescription(code) {
-            const codes = {
-                0: '晴朗 ☀️',
-                1: '大致晴朗 🌤️',
-                2: '多云 ⛅',
-                3: '阴天 ☁️',
-                45: '有雾 🌫️',
-                48: '雾淞 🌫️',
-                51: '轻微毛毛雨 🌧️',
-                61: '小雨 🌧️',
-                63: '中雨 🌧️',
-                65: '大雨 🌧️',
-                80: '阵雨 🌦️',
-                95: '雷暴 🌩️'
-            };
-            return codes[code] || '未知天气';
-        }
-
-        // --- 初始化执行 ---
+        // --- 页面初始化执行 ---
         window.onload = () => {
-            fetchIPInfo();
             getDeviceInfo();
-            fetchHKWeather();
-            
-            // 实时刷新香港时间 (每秒更新)
+            fetchIPAndLocalWeather();
+
+            // 抓取香港天气 (22.3193, 114.1694)
+            fetchWeather(22.3193, 114.1694, 'hk-temp', 'hk-weather');
+            // 抓取广州天气 (23.1291, 113.2644)
+            fetchWeather(23.1291, 113.2644, 'gz-temp', 'gz-weather');
+
             updateHKTime();
             setInterval(updateHKTime, 1000);
         };
