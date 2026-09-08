@@ -32,12 +32,6 @@
             }
         }
 
-        /* 强制地图不受深色模式影响，始终保持白天清晰渲染 */
-        .leaflet-tile-container img {
-            filter: none !important;
-            -webkit-filter: none !important;
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -246,7 +240,7 @@
             </div>
         </div>
 
-        <!-- 4. 免费世界地图 (CARTO 白天浅色图层) -->
+        <!-- 4. 免费世界地图 -->
         <div class="card map-card">
             <div class="card-header">🗺️ 世界地图 (标记 IP 所在位置)</div>
             <div id="map"></div>
@@ -256,14 +250,37 @@
     <!-- Leaflet 免费开源地图 JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
-        // --- 1. 初始化免费地图 (强制白天明亮风格) ---
-        // 使用免费免 API Key 的 CARTO Positron 白天地图瓦片
+        // --- 1. 初始化免费地图 (自动昼夜切换) ---
         const map = L.map('map').setView([20, 0], 2);
-        
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+
+        // 白天地图瓦片 (CARTO Positron)
+        const lightTile = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
             maxZoom: 19,
             attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/">CARTO</a>'
-        }).addTo(map);
+        });
+
+        // 黑夜地图瓦片 (CARTO Dark Matter)
+        const darkTile = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            maxZoom: 19,
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/">CARTO</a>'
+        });
+
+        // 监听系统的深色模式状态并切换地图主题
+        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+        function updateMapTheme(e) {
+            if (e.matches) {
+                if (map.hasLayer(lightTile)) map.removeLayer(lightTile);
+                darkTile.addTo(map);
+            } else {
+                if (map.hasLayer(darkTile)) map.removeLayer(darkTile);
+                lightTile.addTo(map);
+            }
+        }
+
+        // 绑定监听器与首次应用主题
+        darkModeMediaQuery.addEventListener('change', updateMapTheme);
+        updateMapTheme(darkModeMediaQuery);
 
         // --- 2. WMO 天气代码解析器 ---
         function getWeatherDescription(code) {
