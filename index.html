@@ -253,16 +253,16 @@
         // --- 1. 初始化免费地图 (自动昼夜切换) ---
         const map = L.map('map').setView([20, 0], 2);
 
-        // 白天地图瓦片 (CARTO Positron)
-        const lightTile = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        // 白天地图瓦片 (OpenStreetMap 官方)
+        const lightTile = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
-            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/">CARTO</a>'
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         });
 
-        // 黑夜地图瓦片 (CARTO Dark Matter)
-        const darkTile = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-            maxZoom: 19,
-            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/">CARTO</a>'
+        // 黑夜地图瓦片 (Esri Dark Gray Canvas)
+        const darkTile = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+            maxZoom: 16,
+            attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ'
         });
 
         // 监听系统的深色模式状态并切换地图主题
@@ -278,7 +278,7 @@
             }
         }
 
-        // 绑定监听器与首次应用主题
+        // 绑定监听器并首次初始化应用合适主题
         darkModeMediaQuery.addEventListener('change', updateMapTheme);
         updateMapTheme(darkModeMediaQuery);
 
