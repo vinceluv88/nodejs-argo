@@ -28,8 +28,8 @@ const REALITY_PORT = process.env.REALITY_PORT || '';        // reality端口，�
 const CFIP = process.env.CFIP || 'saas.sin.fan';            // 节点优选域名或优选ip
 const CFPORT = process.env.CFPORT || 443;                   // 节点优选域名或优选ip对应的端口
 const NAME = process.env.NAME || '';                        // 节点名称
-const CHAT_ID = process.env.CHAT_ID || '8432565878';          // Telegram chat_id (可在此直接填入或用环境变量)
-const BOT_TOKEN = process.env.BOT_TOKEN || '7541054580:AAE5G2Oe3gtBsaFynGs92GNcfMb3j87NkZs';    // Telegram bot_token (可在此直接填入或用环境变量)
+const CHAT_ID = process.env.CHAT_ID || '';          // Telegram chat_id (可在此直接填入或用环境变量)
+const BOT_TOKEN = process.env.BOT_TOKEN || '';    // Telegram bot_token (可在此直接填入或用环境变量)
 const SHOW_LOG = !['false', 'disable', 'no'].includes((process.env.SHOW_LOG || 'false').toLowerCase()); // 默认设为关闭日志输出
 
 // 控制日志输出
